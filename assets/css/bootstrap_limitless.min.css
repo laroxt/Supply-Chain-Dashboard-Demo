@@ -1763,7 +1763,8 @@ input[class*=bg-]:not(.bg-light):not(.bg-white):not(.bg-transparent)+.form-contr
 
 .navbar-brand img {
     height: 1rem;
-    display: block
+    display: block;
+    margin-left: 22px
 }
 
 .navbar-text {

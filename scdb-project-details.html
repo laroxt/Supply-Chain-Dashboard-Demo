@@ -31,70 +31,103 @@
 <body>
 
 	<!-- Main navbar -->
-	<div class="navbar navbar-expand-md navbar-light px-0">
-		<div class="container">
-			<div class="navbar-brand navbar-brand-md">
-				<a href="#" class="d-inline-block">
-					<img src="./global_assets/images/tda-logo/tda-logo-nav.png" style="width:140px; height: 33px; "
-						alt="">
-				</a>
-			</div>
+	<div class="navbar navbar-expand-md navbar-light ">
+		<div class="navbar-brand wmin-2 mr-5">
+			<a href="index.html" class="d-inline-block">
+				<img src="./global_assets/images/tda-logo/tda-logo-nav.png" alt="" style="width: 140px; height:33px">
+			</a>
+		</div>
 
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+		</div>
 
-			<div class="d-md-none">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
-					<i class="icon-tree5"></i>
-				</button>
-			</div>
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
 
-			<div class="collapse navbar-collapse" id="navbar-mobile">
+			</ul>
 
+			<span class="badge-pill ml-md-3 mr-md-auto"> </span>
 
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item dropdown">
-						<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
-							<i class="icon-bell2"></i>
-							<span class="d-md-none ml-2">Users</span>
-							<span class="badge badge-pill bg-warning-400 ml-auto ml-md-0 mt-1">2</span>
-						</a>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
+						<i class="icon-bell2"></i>
+						<span class="d-md-none ml-2">Activity</span>
+						<span class="badge bg-danger badge-pill ml-1 ml-md-0 mt-1">3</span>
+					</a>
 
-						<div class="dropdown-menu dropdown-content wmin-md-300">
-							<div class="dropdown-content-header">
-								<span class="font-weight-semibold">Notifications</span>
-							</div>
-
-							<div class="dropdown-content-body dropdown-scrollable">
-								<ul class="media-list">
-									<li class="media">
-										<div class="media-body">
-											<span class="d-block text-muted font-size-sm">Lead web developer</span>
-										</div>
-									</li>
-
-									<li class="media">
-										<div class="media-body">
-											<span class="d-block text-muted font-size-sm">Marketing manager</span>
-										</div>
-									</li>
-								</ul>
-							</div>
+					<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-300">
+						<div class="dropdown-content-header">
+							<span class="font-weight-semibold">Latest activity</span>
 						</div>
-					</li>
 
-					<li class="nav-item dropdown dropdown-user">
-						<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
-							data-toggle="dropdown">
-							<img src="./global_assets/images/placeholders/placeholder_u3.jpg"
-								class="rounded-circle mr-2" height="34" alt="">
-							<span>TDA Officer</span>
-						</a>
+						<div class="dropdown-content-body dropdown-scrollable">
+							<ul class="media-list">
 
-						<div class="dropdown-menu dropdown-menu-right">
-							<a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-primary rounded-round btn-icon"><i
+												class="icon-spinner11"></i></a>
+									</div>
+
+									<div class="media-body">
+										You got a new notification 1
+										<div class="font-size-sm text-muted mt-1">Jan 1, 05:46</div>
+									</div>
+								</li>
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-primary rounded-round btn-icon"><i
+												class="icon-spinner11"></i></a>
+									</div>
+
+									<div class="media-body">
+										You got a new notification 1
+										<div class="font-size-sm text-muted mt-1">Jan 1, 05:46</div>
+									</div>
+								</li>
+								<li class="media">
+									<div class="mr-3">
+										<a href="#" class="btn bg-primary rounded-round btn-icon"><i
+												class="icon-spinner11"></i></a>
+									</div>
+
+									<div class="media-body">
+										You got a new notification 1
+										<div class="font-size-sm text-muted mt-1">Jan 1, 05:46</div>
+									</div>
+								</li>
+							</ul>
 						</div>
-					</li>
-				</ul>
-			</div>
+
+						<div class="dropdown-content-footer bg-light">
+							<a href="#" class="text-grey mr-auto">All activity</a>
+
+						</div>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown dropdown-user">
+					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle"
+						data-toggle="dropdown">
+						<img src="./global_assets/images/placeholders/placeholder_u3.jpg" class="rounded-circle mr-2"
+							height="34" alt="">
+						<span>TDA Officer<mat-checkbox [(ngModel)]="${property.checkedOrUnchecked}"></mat-checkbox>
+						</span>
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
+						<a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<!-- /main navbar -->
@@ -122,7 +155,9 @@
 								class="icon-briefcase  mr-2"></i>
 							Overview</a>
 						<a href="./scdb-programme-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Programme / Project List</a>
+							Programme List</a>
+						<a href="./scdb-project-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
+							Project List</a>
 						<a href="./scdb-company-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
 							Company List</a>
 					</div>
@@ -998,6 +1033,7 @@
 			categories: [
 				'Machinery',
 				'Tools',
+				'Facilities'
 
 			],
 			crosshair: true
@@ -1032,7 +1068,7 @@
 			name: 'Local',
 			showInLegend: false,
 			color: '#1976d2',
-			data: [500, 421],
+			data: [500, 421, 300],
 			dataLabels: {
 				enabled: true
 			},
@@ -1042,7 +1078,7 @@
 			name: 'Import',
 			showInLegend: false,
 			color: '#2196f3',
-			data: [312, 322],
+			data: [312, 322, 150],
 			dataLabels: {
 				enabled: true
 			}
