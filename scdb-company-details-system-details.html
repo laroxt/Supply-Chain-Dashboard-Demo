@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>SCDB-Contract-Company Tiering</title>
+	<title>SCDB-SP123-21-System 1</title>
 	<link rel="icon" type="image/png" href="./global_assets/images/tda-logo/tda-logo.png" />
 
 	<!-- Global stylesheets -->
@@ -39,9 +39,8 @@
 	<script src="./global_assets/js/demo_pages/form_select2.js"></script>
 	<!-- /theme JS files -->
 
-	<link href="./orgchart/orgchart.css" rel="stylesheet" type="text/css" />
-	<script src="orgchart/dragscroll-master/dragscroll.js"></script>
 	<script src="assets/js/app.js"></script>
+	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
 
 
 </head>
@@ -201,7 +200,9 @@
 					
 					<div class="breadcrumb mt-1">
 						<a href="scdb-general-overview.html" class="breadcrumb-item py-0">BI Dashboard</a>
-						<span class="breadcrumb-item py-0 active">Contract-Company Tiering</span>
+						<a href="scdb-orgchart.html" class="breadcrumb-item py-0">Contract-Company Tiering</a>
+						<a href="scdb-company-details-system.html" class="breadcrumb-item py-0">Gamuda Berhad</a>
+						<span class="breadcrumb-item py-0 active">SP123-21-System 1</span>
 					</div>
 				</div>
 
@@ -221,212 +222,257 @@
 			<!-- Content area -->
 			<div class="content2 pt-0">
 				<div class="row">
+					<!-- card content placement -->
 					<div class="col-md-12">
-						<div class="row">
-							<div class="col-md-3">
-								<div class="col-md-12">
-									<div class="card">
-										<div class="card-header bg-dark header-elements-inline">
-											<h6 class="card-title font-weight-semibold">Materials Filter Option</h6>
-										</div>
-										<div class="card-body">
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">System Information</h5>
 
-
-											<div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Contract Reference
-														Number</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Contract Name</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-
-											<!-- <div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Company Reference Number</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Company Name</label>
-													<input type="text" class="form-control">
-												</div>
-											</div> -->
-
-											<div class="col-md-12">
-												<div class="form-group">
-													<button type="button" class="btn btn-outline-dark "
-														onclick="location.href='./scdb-programme-list.html'"><i
-															class="mr-1 icon-search4"></i>Search</button>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div>
-
-								<div class="col-md-12">
-									<div class="card" style="height: 500px;">
-										<div class="card-header bg-dark header-elements-inline">
-											<h6 class="card-title font-weight-semibold">General Details</h6>
-										</div>
-										<div class="card-body">
-											<div>
-												<h6 class="font-weight-bold border-bottom"><i
-														class="icon-info3 m-1"></i>Contract Details</h6>
-												<h8 class="font-weight-bold">Contract Name</h8>
-												<p>Contract ABC</p>
-												<h8 class="font-weight-bold">Contract Reference Number</h8>
-												<p>FQ2021213</p>
-												<h8 class="font-weight-bold">Contract Value</h8>
-												<p>RM1,200,000</p>
-												<h8 class="font-weight-bold">Contract Duration</h8>
-												<p>01/01/2021</p>
-												<h8 class="font-weight-bold">Sector & Product / Services</h8>
-												<p>01/02/2021</p>
-												<h6 class="font-weight-bold border-bottom"><i
-														class="icon-info3 m-1"></i>Main-Contractor Details</h6>
-												<h8 class="font-weight-bold">Organization / Company Name</h8>
-												<p>Gamudah Berhad</p>
-												<h8 class="font-weight-bold">Company Registration Number(SSM) / Unique ID</h8>
-												<p>201901000005</p>
-											</div>
-
-										</div>
-									</div>
-								</div>
 							</div>
 
-							<div class="col-md-9">
-								<div class="card ">
-									<div class="card-header bg-dark header-elements-inline">
-										<h6 class="card-title font-weight-bold">Contract Supply Chain Diagram</h6>
 
+
+							<div class="card-body">
+								<div class="row">
+									<style>
+										table.company-view-info td {
+											width: 20%;
+										}
+									</style>
+
+
+									<div class="table-responsive mb-4 ">
+										<table class="table table-bordered company-view-info">
+											<tbody>
+
+
+												<tr>
+													<td colspan="2">
+
+														<label class="font-weight-bold">System Code:</label>
+
+														<h6>SP123-21</h6>
+
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold">System Name:</label>
+
+														<h6>System 1</h6>
+
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold"> Brand:</label>
+
+														<h6>Youfa</h6>
+
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold"> Model:</label>
+
+														<h6>YSP32123</h6>
+
+													</td>
+												</tr>
+												<tr>
+
+													<td colspan="2">
+
+														<label class="font-weight-bold">Quantity:</label>
+
+														<h6>21</h6>
+
+													</td>
+
+													<td colspan="2">
+
+														<label class="font-weight-bold">Material Origin:</label>
+
+														<h6>Local</h6>
+
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold">Country Origin:</label>
+
+														<h6>Malaysia</h6>
+
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold">Certificate of Origin:</label>
+
+														<h6><a href="#">Cert Origin</a></h6>
+
+													</td>
+
+												</tr>
+												<tr>
+													<td colspan="4">
+
+														<label class="font-weight-bold">Company Name:</label>
+
+														<h6>Youfa Cooperation</h6>
+
+													</td>
+													<td colspan="4">
+
+														<label class="font-weight-bold">Description:</label>
+
+														<h6>For underground construction</h6>
+
+													</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+
+														<label class="font-weight-bold">Standard Certification:</label>
+
+														<h6><a href="#">Standard Cert 1</a></h6>
+
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold">Design Document:</label>
+
+														<h6><a href="#">Design Document 1</a></h6>
+
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold">Manual:</label>
+
+														<h6><a href="#">Manual 1</a></h6>
+													</td>
+													<td colspan="2">
+
+														<label class="font-weight-bold">System Picture:</label>
+														<h6><a href="#">Picture 1</a></h6>
+
+													</td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
 
-									<div class="card-body dragscroll"
-										style="height: 760px; overflow: scroll; cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;">
 
-										<div class="orgchart-container">
-											<div class="tree">
-												<ul>
-													<li>
-
-														<a href="./scdb-company-details-machineries.html">
-															<h6 class="m-1 text-dark font-weight-semibold" disabled>Main
-																Contractor</h6><img
-																src="./orgchart/orgchart-logo/1.jpg">
-															<h7 class="m-1 text-dark font-weight-semibold" disabled>
-																Gamuda Berhad</h7><span>View More</span>
-														</a>
-														<ul>
-															<li><a href="#">
-																	<h6 class="m-1 text-dark font-weight-semibold"
-																		disabled>Sub-Contractor</h6><img
-																		src="./orgchart/orgchart-logo/2.jpg">
-																	<h7 class="m-1 text-dark font-weight-semibold"
-																		disabled>
-																		IJM Berhad</h7><span>View More</span>
-																</a>
-																<ul>
-																	<li>
-																		<a href="#">
-																			<h6 class="m-1 text-dark font-weight-semibold"
-																				disabled>Sub-Contractor</h6><img
-																				src="./orgchart/orgchart-logo/3.jpg">
-																			<h7 class="m-1 text-dark font-weight-semibold"
-																				disabled>
-																				UEM Group Berhad</h7><span>View
-																				More</span>
-																		</a>
-																	</li>
-																	<li> <a href="#">
-																			<h6 class="m-1 text-dark font-weight-semibold"
-																				disabled>Sub-Contractor</h6><img
-																				src="./orgchart/orgchart-logo/4.jpg">
-																			<h7 class="m-1 text-dark font-weight-semibold"
-																				disabled>
-																				Muhibbah Berhad</h7><span>View More</span>
-																		</a> </li>
-																</ul>
-															</li>
-															<li> <a href="#">
-																	<h6 class="m-1 text-dark font-weight-semibold"
-																		disabled>Sub-Contractor</h6><img
-																		src="./orgchart/orgchart-logo/5.jpg">
-																	<h7 class="m-1 text-dark font-weight-semibold"
-																		disabled>
-																		Mudajaya Group Berhad </h7><span>View More</span>
-																</a>
-																<ul>
-																	<li> <a href="#">
-																			<h6 class="m-1 text-dark font-weight-semibold"
-																				disabled>Sub-Contractor</h6><img
-																				src="./orgchart/orgchart-logo/6.jpg">
-																			<h7 class="m-1 text-dark font-weight-semibold"
-																				disabled>
-																				WCE Holdings Berhad</h7><span>View
-																				More</span>
-																		</a> </li>
-																	<li> <a href="#">
-																			<h6 class="m-1 text-dark font-weight-semibold"
-																				disabled>Sub-Contractor</h6><img
-																				src="./orgchart/orgchart-logo/7.jpg">
-																			<h7 class="m-1 text-dark font-weight-semibold"
-																				disabled>
-																				WCT Berhad </h7><span>View
-																				More</span>
-																		</a> </li>
-																	<li> <a href="#">
-																			<h6 class="m-1 text-dark font-weight-semibold"
-																				disabled>Sub-Contractor</h6><img
-																				src="./orgchart/orgchart-logo/8.jpg">
-																			<h7 class="m-1 text-dark font-weight-semibold"
-																				disabled>
-																				YTL Corporation</h7><span>View
-																				More</span>
-																		</a> </li>
-																</ul>
-															</li>
-															<li><a href="#">
-																	<h6 class="m-1 text-dark font-weight-semibold"
-																		disabled>Sub-Contractor</h6><img
-																		src="./orgchart/orgchart-logo/9.jpg">
-																	<h7 class="m-1 text-dark font-weight-semibold"
-																		disabled>
-																		MRCB Berhad</h7><span>View More</span>
-																</a></li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-										<style>
-											.orgchart-container {
-												width: 1250px;
-												margin: auto;
-												padding: 10px;
-
-											}
-										</style>
-									</div>
-									<div
-										class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
-										<ul
-											class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
-										</ul>
-
-									</div>
 								</div>
 							</div>
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								<ul
+									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
 
+								</ul>
+
+
+							</div>
 						</div>
+						<!--/ card content placement -->
+					</div>
+					
+
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header bg-white header-elements-inline">
+								<h5 class="card-title font-weight-bold">Material Tiering</h5>
+
+							</div>
+
+							<div class="card-body">
+								
+								<div class="row">
+									<div class="col-md-12">
+										<div class="d-flex justify-content-between align-items-center">
+											<span class="font-weight-semibold h6">Sub-System</span>
+											<button type="button" class="btn bg-light btn-icon rounded-round mt-1"
+												data-toggle="modal" data-target="#addSubSystem"><i class="icon-plus3"
+													data-popup="tooltip" data-original-title="Add"></i></button>
+										</div>
+										<div class="table-responsive">
+											<table class="table datatable-basic ">
+												<thead>
+													<tr>
+														<th>Sub-System Code</th>
+														<th>Sub-System Name</th>
+														<th>Brand</th>
+														<th>Model</th>
+														<th>Quantity</th>
+														<th>Country Origin</th>
+														<th>Company Name</th>
+														<!-- <th>Description</th> -->
+														<!-- <th>Parent Material Code</th>
+														<th>Parent Material Name</th> -->
+														<th class="action-icon-width">Action</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>HMT132-A</td>
+														<td>Sub-System 11</td>
+														<td>Mitsubishi</td>
+														<td>TM3000x1</td>
+														<td>10</td>
+														<td>Malaysia</td>
+														<td>Mitsubishi</td>
+														<!-- <td>Sub-System for general contruction use</td> -->
+														<!-- <td>SP123-21</td>
+														<td>System 1</td> -->
+														<td>
+															<div class="breadcrumb m-2">
+																<a href="#"
+																	class="breadcrumb-elements-item dropdown-toggle"
+																	data-toggle="dropdown" aria-expanded="false">
+																	<i class="icon-menu7"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-left">
+																	<a href="#"
+																		class="dropdown-item"><i
+																			class="icon-file-eye"></i> View</a>
+																	
+																</div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>HMT133-B</td>
+														<td>Sub-System 22</td>
+														<td>Mitsubishi</td>
+														<td>TM3300x2</td>
+														<td>13</td>
+														<td>Malaysia</td>
+														<td>Mitsubishi</td>
+														<!-- <td>Sub-System for general contruction use</td> -->
+														<!-- <td>SP123-21</td>
+														<td>System 1</td> -->
+														<td>
+															<div class="breadcrumb m-2">
+																<a href="#"
+																	class="breadcrumb-elements-item dropdown-toggle"
+																	data-toggle="dropdown" aria-expanded="false">
+																	<i class="icon-menu7"></i>
+																</a>
+																<div class="dropdown-menu dropdown-menu-left">
+																	<a href="#" class="dropdown-item"><i
+																			class="icon-file-eye"></i> View</a>
+																	
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								
+							</div>
+						</div>
+						<!--/ card content placement -->
 					</div>
 
 				</div>
