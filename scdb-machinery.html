@@ -198,21 +198,21 @@
 			</ul>
 
 		</div>
-		
-		
+
+
 	</div>
 	<div class="mb-2">
 		<div class="page-header pr-3 pl-1">
 			<div class="page-header-content header-elements-md-inline">
 				<div class="page-title">
-					
+
 					<div class="breadcrumb mt-1">
 						<a href="scdb-general-overview.html" class="breadcrumb-item py-0">BI Dashboard</a>
 						<span class="breadcrumb-item py-0 active">Machinery & Facilities</span>
 					</div>
 				</div>
 
-				
+
 			</div>
 		</div>
 	</div>
@@ -475,7 +475,8 @@
 
 									<div id="machinery-overview"></div>
 									<h6 class="text-center"><i class="icon-info22 m-1"></i>You're Viewing: <span
-											class="font-weight-semibold text-success ">Machinery & Facilities Overview</span>
+											class="font-weight-semibold text-success ">Machinery & Facilities
+											Overview</span>
 									</h6>
 								</div>
 							</div>
@@ -531,152 +532,152 @@
 		}
 	</style>
 	<script>
-	// Machinery & facilities Overview
-	Highcharts.chart("machinery-overview", {
-		chart: {
-			type: "column",
+		// Machinery & facilities Overview
+		Highcharts.chart("machinery-overview", {
+			chart: {
+				type: "column",
 
-		},
-		title: {
-			text: ''
-		},
-
-		yAxis: [
-			{
-				
-				title: {
-					text: 'Number of Machinery & Facilities',
-				},
 			},
-		],
-
-		credits: {
-			enabled: false,
-		},
-
-		legend: {
-			layout: "horizontal",
-			align: "center",
-			verticalAlign: "bottom",
-			borderWidth: 0,
-		},
-
-		xAxis: {
-			type: "category",
-			crosshair: true,
-		},
-
-		tooltip: {
-			pointFormat:
-				'<span style="color:{series.color}">●</span>{series.name}:<b> {point.y}<br/></b><br>',
-			shared: true,
-		},
-
-		plotOptions: {
-			series: {
-				pointWidth: 50,
-				dataLabels: {
-					enabled: true,
-					inside: true
-				},
+			title: {
+				text: ''
 			},
-			column: {
-				stacking: "normal",
-				pointPadding: 0.2,
+
+			yAxis: [
+				{
+
+					title: {
+						text: 'Number of Machinery & Facilities',
+					},
+				},
+			],
+
+			credits: {
+				enabled: false,
+			},
+
+			legend: {
+				layout: "horizontal",
+				align: "center",
+				verticalAlign: "bottom",
 				borderWidth: 0,
 			},
-		},
 
-		series: [
-			{
-				yAxis: 0,
-				name: "Local",
-				color: "#84d9e5",
-				data: [
-					{
-						name: "Machinery",
-						y: 132,
-					},
-					{
-						name: "Tools",
-						y: 142,
-					},
-					{
-						name: "Facilities",
-						y: 152,
-					},
-				],
+			xAxis: {
+				type: "category",
+				crosshair: true,
 			},
-			{
-				yAxis: 0,
-				name: "Foreign",
-				color: "#064a89",
-				data: [
-					{
-						name: "Machinery",
-						y: 123,
-					},
-					{
-						name: "Tools",
-						y: 111,
-					},
-					{
-						name: "Facilities",
-						y: 142,
-					},
-				],
-			},
-		],
 
-		responsive: {
-			rules: [
+			tooltip: {
+				pointFormat:
+					'<span style="color:{series.color}">●</span>{series.name}:<b> {point.y}<br/></b><br>',
+				shared: true,
+			},
+
+			plotOptions: {
+				series: {
+					pointWidth: 50,
+					dataLabels: {
+						enabled: true,
+						inside: true
+					},
+				},
+				column: {
+					stacking: "normal",
+					pointPadding: 0.2,
+					borderWidth: 0,
+				},
+			},
+
+			series: [
 				{
-					condition: {
-						maxWidth: 250,
-					},
-					chartOptions: {
-						legend: {
-							align: "center",
-							verticalAlign: "bottom",
-							layout: "horizontal",
+					yAxis: 0,
+					name: "Local",
+					color: "#7cb5e9",
+					data: [
+						{
+							name: "Machinery",
+							y: 132,
 						},
-						yAxis: {
-							labels: {
-								align: "left",
-								x: 0,
-								y: -5,
+						{
+							name: "Tools",
+							y: 142,
+						},
+						{
+							name: "Facilities",
+							y: 152,
+						},
+					],
+				},
+				{
+					yAxis: 0,
+					name: "Foreign",
+					color: "#424242",
+					data: [
+						{
+							name: "Machinery",
+							y: 123,
+						},
+						{
+							name: "Tools",
+							y: 111,
+						},
+						{
+							name: "Facilities",
+							y: 142,
+						},
+					],
+				},
+			],
+
+			responsive: {
+				rules: [
+					{
+						condition: {
+							maxWidth: 250,
+						},
+						chartOptions: {
+							legend: {
+								align: "center",
+								verticalAlign: "bottom",
+								layout: "horizontal",
 							},
-							title: {
+							yAxis: {
+								labels: {
+									align: "left",
+									x: 0,
+									y: -5,
+								},
+								title: {
+									text: null,
+								},
+							},
+							subtitle: {
 								text: null,
 							},
-						},
-						subtitle: {
-							text: null,
-						},
-						credits: {
-							enabled: false,
-						},
-						plotOptions: {
-							series: {
-								pointWidth: 25,
+							credits: {
+								enabled: false,
 							},
-							column: {
-								stacking: "normal",
-								pointPadding: 0.2,
-								borderWidth: 0,
-								dataLabels: {
-									enabled: true,
-									formatter: function () {
-										return this.y != 0 ? this.y : "";
+							plotOptions: {
+								series: {
+									pointWidth: 25,
+								},
+								column: {
+									stacking: "normal",
+									pointPadding: 0.2,
+									borderWidth: 0,
+									dataLabels: {
+										enabled: true,
+										formatter: function () {
+											return this.y != 0 ? this.y : "";
+										},
 									},
 								},
 							},
 						},
 					},
-				},
-			],
-		},
-	});
+				],
+			},
+		});
 	// Machinery & facilities Overview
 
 	</script>
