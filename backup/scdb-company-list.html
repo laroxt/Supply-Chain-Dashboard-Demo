@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>SCDB-Project List</title>
+	<title>SCDB-Company List</title>
 	<link rel="icon" type="image/png" href="./global_assets/images/tda-logo/tda-logo.png" />
 
 	<!-- Global stylesheets -->
@@ -32,6 +32,9 @@
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="./global_assets/js/demo_pages/datatables_extension_colvis.js"></script>
 	<script src="./global_assets/js/demo_pages/components_popups.js"></script>
+
+	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
+	<script type="text/javascript" src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 
 	<script src="./global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
@@ -145,7 +148,6 @@
 		</div>
 	</div>
 	<!-- /main navbar -->
-
 	<!-- Secondary navbar -->
 	<div class="navbar navbar-expand-md bg-light mb-4">
 		<div class="text-center d-md-none w-100">
@@ -168,13 +170,15 @@
 						<a href="./scdb-general-overview.html" class="dropdown-item"> <i
 								class="icon-briefcase  mr-2"></i>
 							Overview</a>
-						<a href="./scdb-programme-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Programme List</a>
-						<a href="./scdb-project-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Project List</a>
-						<a href="./scdb-company-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Company List</a>
 					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="./scdb-orgchart.html" class="navbar-nav-link text-dark">
+						<i class="icon-tree7 mr-1"></i>
+						Contract-Company Tiering
+					</a>
+
 				</li>
 
 				<li class="nav-item">
@@ -206,7 +210,7 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header bg-dark header-elements-inline">
-								<h6 class="card-title font-weight-semibold">Project List</h6>
+								<h6 class="card-title font-weight-semibold">Company List</h6>
 								<div class="header-elements">
 									<div class="list-icons">
 										<a href="#" class="list-icons-item" data-popup="tooltip"
@@ -221,487 +225,140 @@
 
 
 							<div class="mt-1">
-								<table class=" table datatable-colvis-restore-2">
+								<table class=" table datatable-basic">
 									<thead>
 										<tr>
 
-											<th class="bg-dark pl-3">Project <br>Reference Number</th>
-											<th class="bg-dark">Project Name</th>
-											<th class="bg-dark">Project Value</th>
-											<th class="bg-dark">Project Start Date</th>
-											<th class="bg-dark">Project End Date</th>
-											<th class="bg-dark">Sector<br> Name</th>
-											<th class="bg-dark">Sub-Sector</th>
-											<th class="bg-dark">Product & Services</th>
-											<th class="bg-dark">Company SSM / Unique ID</th>
+											<th class="bg-dark pl-3">Company SSM / Unique ID</th>
 											<th class="bg-dark">Company Name</th>
-											<th class="bg-dark">Contractor Type</th>
-											<th class="bg-dark">Contractor Name</th>
-											<th class="bg-dark">Contractor Email</th>
-											<th class="bg-dark">Contractor Number</th>
-											<th class="bg-dark">Designation</th>
+											<th class="bg-dark"> Company Email</th>
+											<th class="bg-dark">Company Telephone</th>
+											<th class="bg-dark">Company Type</th>
+											<th class="bg-dark">Company Status</th>
+
+
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
 											<td>111111</td>
-											<td><a href="scdb-project-details.html">Sunway Construction Area A</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
-											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td><a href="./scdb-company-details.html">Gamuda Berhad</a></td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 										<tr>
 											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
 											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
-											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
-											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
-											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
-											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Project ABC</td>
-											<td>RM1,000,000</td>
-											<td>01/01/2021</td>
-											<td>01/02/2021</td>
-											<td>Civil & Construction</td>
-											<td>
-												<span class="badge badge-light font-size-sm m-1">Industrial
-													Building System(IBS)
-												</span>
-												<span class="badge badge-light font-size-sm m-1">Other
-												</span>
-											</td>
-											<td>Design</td>
-											<td>11111</td>
-											<td>Company ABC</td>
-											<td>Main-Contractor</td>
-											<td>Abdul Hamid</td>
-											<td>Abdul.Hamid@abc.com.my</td>
-											<td>011-111 1111</td>
-											<td>Project Manager</td>
+											<td>CompanyABC@gmail.com</td>
+											<td>03-1111 1111</td>
+											<td>Government</td>
+											<td>Local Bumi</td>
 										</tr>
 									</tbody>
 								</table>
@@ -713,7 +370,7 @@
 					<aside>
 						<div class="mt-1 card-body" style="overflow-y: auto; height: 720px;">
 							<div class="form-group text-sm">
-								<h8 class="font-weight-semibold">Project Value Range</h8>
+								<h8 class="font-weight-semibold">ContractorValue Range</h8>
 								<div class="border-bottom mt-1"></div>
 								<div class="mb-2 mt-1 row">
 

@@ -33,8 +33,8 @@ var DatatableBasic = (function () {
       ],
       dom: '<"datatable-header"fl><"datatable-scroll"t><"datatable-footer"ip>',
       language: {
-        search: "<span>Filter:</span> _INPUT_",
-        searchPlaceholder: "Type to filter...",
+        search: "<span>Search:</span> _INPUT_",
+        searchPlaceholder: "Type to search...",
         lengthMenu: "<span>Show:</span> _MENU_",
         paginate: {
           first: "First",

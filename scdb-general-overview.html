@@ -154,13 +154,16 @@
 						<a href="./scdb-general-overview.html" class="dropdown-item"> <i
 								class="icon-briefcase  mr-2"></i>
 							Overview</a>
-						<a href="./scdb-programme-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Programme List</a>
-						<a href="./scdb-project-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Project List</a>
-						<a href="./scdb-company-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Company List</a>
+
 					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="./scdb-orgchart.html" class="navbar-nav-link text-dark">
+						<i class="icon-tree7 mr-1"></i>
+						Contract-Company Tiering
+					</a>
+
 				</li>
 
 				<li class="nav-item">
@@ -170,6 +173,7 @@
 					</a>
 
 				</li>
+				
 			</ul>
 
 		</div>
@@ -187,48 +191,21 @@
 			<div class="content2 pt-0">
 				<div class="row">
 					<!-- card content placement -->
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header bg-dark header-elements-inline">
-								<h6 class="card-title font-weight-bold">Programme Value by Company Status</h6>
+								<h6 class="card-title font-weight-bold">Contract Value By Sector</h6>
 
 							</div>
 
 							<div class="card-body">
 								<div class="highcharts-figure">
-									<div id="programme-value-overview"></div>
+									<div id="contract-value-by-sector"></div>
 								</div>
 								<div>
 									<div class="col-xl-12">
 										<div class="table-responsive">
-											<table class="table table-bordered font-weight-semibold">
-												<tbody>
-													<tr class="text-center font-size-xs">
-														<td style="background-color: #0d47a1; color:white; width: 10%;">
-															Local Bumi</td>
-														<td style="background-color: #2196f3
-																; color:white ; width: 10%;">
-															Local Non-Bumi
-														</td>
-														<td style="background-color: #1976d2
-																; color:white; width: 10%;">
-															Foreign
-														</td>
-														<td style="background-color: #283593
-														; color:white; width: 10%;">
-															Total Programme
-														</td>
-													</tr>
 
-													<tr class="text-center font-size-xs">
-														<td style="width: 10%;">RM200M</td>
-														<td style="width: 10%;">RM80M</td>
-														<td style="width: 10%;">RM180M</td>
-														<td style="width: 10%;">30</td>
-													</tr>
-
-												</tbody>
-											</table>
 										</div>
 									</div>
 								</div>
@@ -241,13 +218,14 @@
 								<ul
 									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
 									<button type="button" class="btn btn-outline-dark"
-										onClick="location.href='./scdb-programme-list.html'"><i
+										onClick="location.href='./scdb-contract-list.html'"><i
 											class="icon-info22 mr-1"></i>
 										View Details</button>
 								</ul>
 							</div>
 						</div>
 					</div>
+
 					<div class="col-md-6">
 						<div class="card">
 							<div class="card-header bg-dark header-elements-inline">
@@ -255,11 +233,42 @@
 
 							</div>
 
+
 							<div class="card-body">
 								<div class="highcharts-figure">
-									<div id="Company-overview"></div>
+									<div id="company-overview"></div>
 								</div>
-								<div>
+							</div>
+
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								<ul
+									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
+								</ul>
+								<ul
+									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
+									<button type="button" class="btn btn-outline-dark"
+										onClick="location.href='./scdb-company-list.html'"><i
+											class="icon-info22 mr-1"></i>
+										View Details</button>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-header bg-dark header-elements-inline">
+								<h6 class="card-title font-weight-bold">Company Overview Percentage</h6>
+
+							</div>
+
+							<div class="card-body">
+								<div class="highcharts-figure">
+									<div id="company-overview-percentage"></div>
+								</div>
+
+								<!-- <div>
+
 									<div class="col-xl-12">
 										<div class="table-responsive">
 											<table class="table table-bordered font-weight-semibold">
@@ -287,7 +296,7 @@
 											</table>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 
 							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
@@ -305,18 +314,22 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-md-6">
-						<div class="card">
+						<div class="card ">
 							<div class="card-header bg-dark header-elements-inline">
-								<h6 class="card-title font-weight-bold">Local Vs Foreign Manpower</h6>
+								<h6 class="card-title font-weight-bold">Contract Value By Company Status</h6>
 
 							</div>
 
 
 							<div class="card-body">
+
 								<div class="highcharts-figure">
-									<div id="manpower-local-vs-foreign"></div>
+									<div id="contract-overview"></div>
 								</div>
+
+
 							</div>
 
 							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
@@ -326,26 +339,80 @@
 								<ul
 									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
 									<button type="button" class="btn btn-outline-dark"
-										onClick="location.href='./scdb-manpower-livestock.html'"><i
-											class="icon-info22 mr-1"></i>
-										View Details</button>
+									onClick="location.href='./scdb-company-list.html'"><i class="icon-info22 mr-1"></i>
+									View Details</button>
 								</ul>
 							</div>
 						</div>
 					</div>
+
 					<div class="col-md-6">
 						<div class="card ">
 							<div class="card-header bg-dark header-elements-inline">
-								<h6 class="card-title font-weight-bold">Local Bumi Vs Non-Bumi Manpower</h6>
+								<h6 class="card-title font-weight-bold">Contract Value By Company Status Percentage</h6>
 
 							</div>
 
 
 							<div class="card-body">
-
 								<div class="highcharts-figure">
-									<div id="manpower-bumi-vs-non"></div>
+									<div id="contract-overview-percentage"></div>
 								</div>
+								<!-- <div class="col-xl-12">
+									<div class="table-responsive">
+										<table class="table table-bordered font-weight-semibold">
+											<tbody>
+												<tr class="text-center font-size-xs">
+													<td style="background-color: #0d47a1; color:white; width: 10%;">
+														Local Bumi</td>
+													<td style="background-color: #2196f3
+																; color:white; ; width: 10%;">
+														Local Non-Bumi
+													</td>
+													<td style="background-color: #1976d2
+																; color:white; width: 10%;">
+														Foreign
+													</td>
+												</tr>
+
+												<tr class="text-center font-size-xs">
+													<td style="width: 10%;">1,000</td>
+													<td style="width: 10%;">400</td>
+													<td style="width: 10%;">322</td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+								</div> -->
+							</div>
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								<ul
+									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
+								</ul>
+								<ul
+									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
+									<button type="button" class="btn btn-outline-dark"
+										onClick="location.href='./scdb-company-list.html'"><i class="icon-info22 mr-1"></i>
+										View Details</button>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card ">
+							<div class="card-header bg-dark header-elements-inline">
+								<h6 class="card-title font-weight-bold">ICP Involvement By Company</h6>
+
+							</div>
+
+
+							<div class="card-body">
+								<div class="highcharts-figure">
+									<div id="icp-involvement"></div>
+								</div>
+
 
 							</div>
 
@@ -355,7 +422,124 @@
 								</ul>
 								<ul
 									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
-									<button type="button" class="btn btn-outline-dark"><i class="icon-info22 mr-1"></i>
+									<button type="button" class="btn btn-outline-dark"
+										onClick="location.href='./scdb-icp-list.html'"><i class="icon-info22 mr-1"></i>
+										View Details</button>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card ">
+							<div class="card-header bg-dark header-elements-inline">
+								<h6 class="card-title font-weight-bold">Manpower Classification</h6>
+
+							</div>
+
+
+							<div class="card-body">
+								<div class="highcharts-figure">
+									<div id="manpower-classification"></div>
+								</div>
+
+
+							</div>
+
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								<ul
+									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
+								</ul>
+								<ul
+									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
+									<button type="button" class="btn btn-outline-dark"
+										onClick="location.href='./scdb-company-list.html'"><i class="icon-info22 mr-1"></i>
+										View Details</button>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card ">
+							<div class="card-header bg-dark header-elements-inline">
+								<h6 class="card-title font-weight-bold">Local Vs Foreign Manpower</h6>
+
+							</div>
+
+
+							<div class="card-body">
+								<div class="highcharts-figure">
+									<div id="local-vs-foreign-manpower"></div>
+								</div>
+
+
+							</div>
+
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								<ul
+									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
+								</ul>
+								<ul
+									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
+									<button type="button" class="btn btn-outline-dark"
+										onClick="location.href='./scdb-company-list.html'"><i class="icon-info22 mr-1"></i>
+										View Details</button>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card ">
+							<div class="card-header bg-dark header-elements-inline">
+								<h6 class="card-title font-weight-bold">Local Bumiputera Vs Non-Bumiputera Manpower</h6>
+
+							</div>
+
+
+							<div class="card-body">
+								<div class="highcharts-figure">
+									<div id="bumi-vs-nonbumi-manpower"></div>
+								</div>
+
+
+							</div>
+
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								<ul
+									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
+								</ul>
+								<ul
+									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
+									<button type="button" class="btn btn-outline-dark"
+										onClick="location.href='./scdb-company-list.html'"><i class="icon-info22 mr-1"></i>
+										View Details</button>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card ">
+							<div class="card-header bg-dark header-elements-inline">
+								<h6 class="card-title font-weight-bold">Machinery & Facilities Overview</h6>
+
+							</div>
+
+
+							<div class="card-body">
+								<div class="highcharts-figure">
+									<div id="machinery-overview"></div>
+								</div>
+
+
+							</div>
+
+							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
+								<ul
+									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
+								</ul>
+								<ul
+									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
+									<button type="button" class="btn btn-outline-dark"
+										onClick="location.href='./scdb-machinery.html'"><i class="icon-info22 mr-1"></i>
 										View Details</button>
 								</ul>
 							</div>
@@ -374,37 +558,9 @@
 									<div id="material-overview"></div>
 								</div>
 
-								<div>
-									<div class="col-xl-12">
-										<div class="table-responsive">
-											<table class="table table-bordered font-weight-semibold">
-												<tbody>
-													<tr class="text-center font-size-xs">
-														<td style="background-color: #0d47a1; color:white; width: 10%;">
-															Total Local Material</td>
-														<td style="background-color: #2196f3
-																; color:white ; width: 10%;">
-															Total Import Material
-														</td>
-														<td style="background-color: #6d6d6d
-																; color:white; width: 10%;">
-															Total Material
-														</td>
-													</tr>
-
-													<tr class="text-center font-size-xs">
-														<td style="width: 10%;">2,362</td>
-														<td style="width: 10%;">1,981</td>
-														<td style="width: 10%;">4,343</td>
-													</tr>
-
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
 
 							</div>
+
 							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
 								<ul
 									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
@@ -416,67 +572,8 @@
 										View Details</button>
 								</ul>
 							</div>
-
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div class="card ">
-							<div class="card-header bg-dark header-elements-inline">
-								<h6 class="card-title font-weight-bold">Machinery Overview</h6>
-
-							</div>
-
-
-							<div class="card-body">
-								<div class="highcharts-figure">
-									<div id="machinery-overview"></div>
-								</div>
-
-								<div>
-									<div class="col-xl-12">
-										<div class="table-responsive">
-											<table class="table table-bordered font-weight-semibold">
-												<tbody>
-													<tr class="text-center font-size-xs">
-														<td style="background-color: #0d47a1; color:white; width: 10%;">
-															Total Local Machinery</td>
-														<td style="background-color: #2196f3
-																; color:white ; width: 10%;">
-															Total Import Machinery
-														</td>
-														<td style="background-color: #6d6d6d
-																; color:white; width: 10%;">
-															Total Machinery
-														</td>
-													</tr>
-
-													<tr class="text-center font-size-xs">
-														<td style="width: 10%;">921</td>
-														<td style="width: 10%;">634</td>
-														<td style="width: 10%;">1,155</td>
-													</tr>
-
-												</tbody>
-											</table>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="card-footer  d-sm-flex justify-content-sm-between align-items-sm-center">
-								<ul
-									class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
-								</ul>
-								<ul
-									class="pagination pagination-sm pagination-pager justify-content-between mt-2 mt-sm-0">
-									<button type="button" class="btn btn-outline-dark"
-										onClick="location.href='./scdb-machniery.html'"><i class="icon-info22 mr-1"></i>
-										View Details</button>
-								</ul>
-							</div>
-						</div>
-					</div>
-
 				</div>
 			</div>
 			<!-- /content area -->
@@ -518,158 +615,528 @@
 
 
 <style type="text/css">
-	#programme-info-overview {
-		height: 350px;
+	#contract-value-by-sector {
+		height: 500px;
+		margin-top: 30px;
 	}
 
-
-	#programme-value-overview {
-		height: 350px;
-	}
-
-	#Company-overview {
-		height: 350px;
-	}
-
-	#manpower-local-vs-foreign {
-		height: 350px;
-		width: 100%;
+	#company-overview {
 		margin-top: 20px;
 	}
 
-	#manpower-bumi-vs-non {
-		height: 350px;
-		width: 100%;
+	#contract-overview {
 		margin-top: 20px;
 	}
 
-	#material-overview {
-		height: 350px;
-		width: 100%;
+	#company-overview-percentage {
+		margin-top: 10px;
+	}
+
+	#contract-overview-percentage {
+		margin-top: 20px;
+	}
+
+	#icp-involvement {
+		margin-top: 20px;
+	}
+
+	#manpower-classification {
+		margin-top: 20px;
+	}
+
+	#local-vs-foreign-manpower {
+		margin-top: 20px;
+	}
+
+	#bumi-vs-nonbumi-manpower {
 		margin-top: 20px;
 	}
 
 	#machinery-overview {
-		height: 350px;
-		width: 100%;
+		margin-top: 20px;
+	}
+
+	#material-overview {
 		margin-top: 20px;
 	}
 </style>
 
 <script>
-
-
-	// Programme Overview
-	Highcharts.chart('programme-value-overview', {
+	//Contract Value By Sector
+	Highcharts.chart("contract-value-by-sector", {
 		chart: {
-			plotShadow: false,
-			type: 'pie',
+			type: "column",
+
 		},
 		title: {
-			text: '<b style="font-size:16px;">Total Programme Value<br><span style="font-size:20px;">RM460M</span></b>',
-			align: 'center',
-			verticalAlign: 'middle',
-			y: 25,
+			text: ''
+		},
 
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		accessibility: {
-			point: {
-				valueSuffix: '%'
-			}
-		},
-		plotOptions: {
-			pie: {
-				dataLabels: {
-					enabled: false,
-					distance: -30,
-					style: {
-						fontWeight: 'bold',
-						color: 'white'
-					}
+		yAxis: [
+			{
+				labels: {
+					format: "{value}k",
 				},
-				states: {
-					hover: {
-						halo: {
-							size: 0
-						}
-					}
+				title: {
+					text: 'Contract Value(RM)',
 				},
-				startAngle: -360,
-				endAngle: 360,
-			}
-		},
+			},
+		],
+
 		credits: {
-			enabled: false
+			enabled: false,
 		},
-		series: [{
-			showInLegend: false,
-			name: 'Programme Value',
-			innerSize: '78%',
-			color: 'blue',
-			x: 0,
-			size: '85%',
 
-			tooltip: {
-				valueDecimals: 0,
-				pointFormat: '<b><span style="color:{point.color}">\u25CF</span> {series.name}: RM{point.y}M ({point.percentage:.1f}%)</b>'
-			},
-
-			data: [
-				{
-					name: 'Local Bumi',
-					y: 200,
-					color: " #0d47a1",
-
-
-				},
-				{
-					name: 'Local Non-Bumi',
-					y: 80,
-					color: "#2196f3",
-
-
-				},
-				{
-					name: 'Foreign',
-					y: 180,
-					color: "#1976d2",
-
-
-				},
-			]
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
 		},
-		{
-			showInLegend: false,
-			tooltip: {
-				valueDecimals: 0,
-				pointFormat: '<b><span style="color:{point.color}">\u25CF</span> {series.name}: {point.y}</b>'
-			},
-			name: 'Number of Programme',
-			innerSize: '85%',
-			x: 1,
-			size: '100%',
-			data: [{
-				name: 'Total Programme',
-				y: 30,
-				color: "#283593",
 
-			},]
-		}
-		]
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				dataLabels: {
+					enabled: true,
+					inside: true,
+					pointFormat:
+				'RM{point.y}k<br/></b><br>',
+				},
+				
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Bumiputera",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "Agriculture / Food Processing",
+						y: 23.9,
+					},
+					{
+						name: "Machinery & Metal",
+						y: 32.7,
+					},
+					{
+						name: "Chemical Industries",
+						y: 35.4,
+					},
+					{
+						name: "Civil / Construction / Building Tehcnology",
+						y: 38.1,
+					},
+					{
+						name: "Food & Drink",
+						y: 25.3,
+					},
+					{
+						name: "Forestry",
+						y: 24.3,
+					},
+					{
+						name: "Hotel / Catering / Tourism",
+						y: 28.3,
+					},
+					{
+						name: "Life Science & Medical Technology",
+						y: 32.3,
+					},
+					{
+						name: "Electrical & Electronic",
+						y: 24.3,
+					},
+					{
+						name: "Textiles & Apparels",
+						y: 28.3,
+					},
+					{
+						name: "Transport",
+						y: 32.3,
+					},
+					{
+						name: "Utilities",
+						y: 25.3,
+					},
+					{
+						name: "ICT Services / Smart Tehcnology",
+						y: 25.3,
+					},
+					{
+						name: "Green Technology",
+						y: 32.3,
+					},
+					{
+						name: "Financial / Accounting Services",
+						y: 31.3,
+					},
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Non-Bumiputera",
+				color: "#064a89",
+				data: [
+					{
+						name: "Agriculture / Food Processing",
+						y: 23.9,
+					},
+					{
+						name: "Machinery & Metal",
+						y: 26.7,
+					},
+					{
+						name: "Chemical Industries",
+						y: 28.4,
+					},
+					{
+						name: "Civil / Construction / Building Tehcnology",
+						y: 38.1,
+					},
+					{
+						name: "Food & Drink",
+						y: 36.3,
+					},
+					{
+						name: "Forestry",
+						y: 23.3,
+					},
+					{
+						name: "Hotel / Catering / Tourism",
+						y: 35.3,
+					},
+					{
+						name: "Life Science & Medical Technology",
+						y: 23.3,
+					},
+					{
+						name: "Electrical & Electronic",
+						y: 29.3,
+					},
+					{
+						name: "Textiles & Apparels",
+						y: 32.3,
+					},
+					{
+						name: "Transport",
+						y: 21.3,
+					},
+					{
+						name: "Utilities",
+						y: 25.3,
+					},
+					{
+						name: "ICT Services / Smart Tehcnology",
+						y: 32.3,
+					},
+					{
+						name: "Green Technology",
+						y: 36.3,
+					},
+					{
+						name: "Financial / Accounting Services",
+						y: 32.3,
+					},
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "Agriculture / Food Processing",
+						y: 21.9,
+					},
+					{
+						name: "Machinery & Metal",
+						y: 29.7,
+					},
+					{
+						name: "Chemical Industries",
+						y: 23.4,
+					},
+					{
+						name: "Civil / Construction / Building Tehcnology",
+						y: 32.1,
+					},
+					{
+						name: "Food & Drink",
+						y: 25.3,
+					},
+					{
+						name: "Forestry",
+						y: 35.3,
+					},
+					{
+						name: "Hotel / Catering / Tourism",
+						y: 32.3,
+					},
+					{
+						name: "Life Science & Medical Technology",
+						y: 25.3,
+					},
+					{
+						name: "Electrical & Electronic",
+						y: 32.3,
+					},
+					{
+						name: "Textiles & Apparels",
+						y: 27.3,
+					},
+					{
+						name: "Transport",
+						y: 28.3,
+					},
+					{
+						name: "Utilities",
+						y: 32.3,
+					},
+					{
+						name: "ICT Services / Smart Tehcnology",
+						y: 21.3,
+					},
+					{
+						name: "Green Technology",
+						y: 31.3,
+					},
+					{
+						name: "Financial / Accounting Services",
+						y: 23.3,
+					},
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 750,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 25,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
 	});
-	// Programme Overview
+	//Contract Value By Sector
 
+	//Company Overview
+	Highcharts.chart("company-overview", {
+		chart: {
+			type: "column",
+
+		},
+		title: {
+			text: ''
+		},
+
+		yAxis: [
+			{
+				labels: {
+					format: "{value}M",
+				},
+				title: {
+					text: 'Number of Company',
+				},
+			},
+		],
+
+		credits: {
+			enabled: false,
+		},
+
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
+		},
+
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}M<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				showInLegend: false,
+				dataLabels: {
+					enabled: true,
+					inside: true,
+				},
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Bumiputera",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "Bumiputera",
+						y: 26,
+
+					},
+
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Non-Bumiputera",
+				color: "#064a89",
+				data: [
+					{
+						name: "Non-Bumiputera",
+						y: 24,
+					},
+
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "Foreign",
+						y: 21,
+					},
+
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 150,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 55,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+
+	});
 	// Company Overview
-	Highcharts.chart('Company-overview', {
+
+	// Company Overview Percentage
+	Highcharts.chart('company-overview-percentage', {
 		chart: {
 			plotShadow: false,
 			type: 'pie',
 		},
 		title: {
-			text: '<b style="font-size:16px;">Total Company<br><span style="font-size:20px;">1,777</span></b>',
+			text: '<b style="font-size:16px;">Total Company<br><span style="font-size:20px;">71</span></b>',
 			align: 'center',
 			verticalAlign: 'middle',
 			y: 25,
@@ -683,15 +1150,13 @@
 				valueSuffix: '%'
 			}
 		},
+
 		plotOptions: {
 			pie: {
 				dataLabels: {
-					enabled: false,
-					distance: -30,
-					style: {
-						fontWeight: 'bold',
-						color: 'white'
-					}
+					enabled: true,
+					format: '<b>{point.name}</b><br>{point.y} ({point.percentage:.1f}%)'
+
 				},
 				states: {
 					hover: {
@@ -704,16 +1169,18 @@
 				endAngle: 360,
 			}
 		},
+
 		credits: {
 			enabled: false
 		},
+
 		series: [{
 			showInLegend: false,
 			name: 'Number of Company',
-			innerSize: '75%',
+			innerSize: '65%',
 			color: 'blue',
 			x: 0,
-			size: '100%',
+			size: '80%',
 
 			tooltip: {
 				valueDecimals: 0,
@@ -722,14 +1189,253 @@
 
 			data: [
 				{
-					name: 'Local Bumi',
+					name: 'Bumiputera',
+					y: 26,
+					color: " #0d47a1",
+
+
+				},
+				{
+					name: 'Non-Bumiputera',
+					y: 24,
+					color: "#2196f3",
+
+
+				},
+				{
+					name: 'Foreign',
+					y: 21,
+					color: "#1976d2",
+
+
+				},
+			]
+		},
+		]
+	});
+	// Company Overview Percentage
+
+
+	//Contract Value Overview
+	Highcharts.chart("contract-overview", {
+		chart: {
+			type: "column",
+
+		},
+		title: {
+			text: ''
+		},
+
+		yAxis: [
+			{
+				labels: {
+					format: "{value}k",
+				},
+				title: {
+					text: 'Contract Value(RM)',
+				},
+			},
+		],
+
+		credits: {
+			enabled: false,
+		},
+
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
+		},
+
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b> RM{point.y}k<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				showInLegend: false,
+				dataLabels: {
+					enabled: true,
+					inside: true,
+					pointFormat:
+				'RM{point.y}k<br/></b><br>',
+				},
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Bumiputera",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "Bumiputera",
+						y: 1000,
+
+					},
+
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Non-Bumiputera",
+				color: "#064a89",
+				data: [
+					{
+						name: "Non-Bumiputera",
+						y: 400,
+					},
+
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "Foreign",
+						y: 322,
+					},
+
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 150,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 55,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+	});
+	//Contract Value Overview
+
+	//Contract Value Overview Percentage
+	Highcharts.chart('contract-overview-percentage', {
+		chart: {
+			plotShadow: false,
+			type: 'pie',
+		},
+		title: {
+			text: '<b style="font-size:16px;">Total Company<br><span style="font-size:20px;">1,722k</span></b>',
+			align: 'center',
+			verticalAlign: 'middle',
+			y: 25,
+
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		accessibility: {
+			point: {
+				valueSuffix: '%'
+			}
+		},
+
+		plotOptions: {
+			pie: {
+				dataLabels: {
+					enabled: true,
+					format: '<b>{point.name}</b><br>RM{point.y}k<br> ({point.percentage:.1f}%)'
+
+				},
+				states: {
+					hover: {
+						halo: {
+							size: 0
+						}
+					}
+				},
+				startAngle: -360,
+				endAngle: 360,
+			}
+		},
+
+		credits: {
+			enabled: false
+		},
+		series: [{
+			showInLegend: false,
+			name: 'Number of Company',
+			innerSize: '65%',
+			color: 'blue',
+			x: 0,
+			size: '80%',
+
+
+			tooltip: {
+				valueDecimals: 0,
+				pointFormat: '<b><span style="color:{point.color}">\u25CF</span> {series.name}: {point.y} ({point.percentage:.1f}%)</b>'
+			},
+
+			data: [
+				{
+					name: 'Bumiputera',
 					y: 1000,
 					color: " #0d47a1",
 
 
 				},
 				{
-					name: 'Local Non-Bumi',
+					name: 'Non-Bumiputera',
 					y: 400,
 					color: "#2196f3",
 
@@ -746,301 +1452,988 @@
 		},
 		]
 	});
-	// Company Overview
+	// Contract Value Overview Percentage
 
-	// Manpower Local Bumi x Foreign
-	Highcharts.chart('manpower-local-vs-foreign', {
+	// ICP Involvement By Company
+	Highcharts.chart("icp-involvement", {
 		chart: {
-			type: 'column'
+			type: "column",
+
 		},
 		title: {
 			text: ''
 		},
 
-		xAxis: {
-			categories: [
-				'2016',
-				'2017',
-				'2018',
-				'2019',
-				'2020',
-				'2021'
-			],
-			crosshair: true
-		},
+		yAxis: [
+			{
+			
+				title: {
+					text: 'Number of ICP Involvement',
+				},
+			},
+		],
+
 		credits: {
-			enabled: false
+			enabled: false,
 		},
-		yAxis: {
 
-			min: 0,
-			title: {
-				text: 'Number of Manpower'
-			},
-			labels: {
-				format: "{value}k",
-			},
-		},
-		tooltip: {
-			shared: true,
-			useHTML: true
-		},
-		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		series: [{
-			name: 'Local',
-			showInLegend: false,
-			color: '#1976d2',
-			data: [492, 713, 1062, 1294, 1424, 1736],
-			dataLabels: {
-				enabled: true,
-				formatter: function () {
-					return this.y + "k";
-				},
-			}
-		},
-		{
-			name: 'Foreign',
-			showInLegend: false,
-			color: '#2196f3',
-			data: [259, 521, 846, 1209, 1124, 1256],
-			dataLabels: {
-				enabled: true,
-				formatter: function () {
-					return this.y + "k";
-				},
-			}
-		},]
-	});
-	// Manpower Local x Foreign
-
-
-	// Manpower Local Bumi x Non
-	Highcharts.chart('manpower-bumi-vs-non', {
-		chart: {
-			type: 'column'
-		},
-		title: {
-			text: ''
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
 		},
 
 		xAxis: {
-			categories: [
-				'2016',
-				'2017',
-				'2018',
-				'2019',
-				'2020',
-				'2021'
-			],
-			crosshair: true
+			type: "category",
+			crosshair: true,
 		},
-		credits: {
-			enabled: false
-		},
-		yAxis: {
 
-			min: 0,
-			title: {
-				text: 'Number of Manpower'
-			},
-			labels: {
-				format: "{value}k",
-			},
-
-		},
 		tooltip: {
 			pointFormat:
-				'<span style="color:{series.color}">●</span>{series.name}:<b>{point.y}k<br/></b>',
+				'<span style="color:{series.color}">●</span>{series.name}:<b> {point.y}<br/></b><br>',
 			shared: true,
-			useHTML: true
 		},
+
 		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		series: [{
-			name: 'Local Bumi',
-			showInLegend: false,
-			color: '#1976d2',
-			data: [1339, 1252, 1411, 1224, 1532, 1611],
-			dataLabels: {
-				enabled: true,
-				formatter: function () {
-					return this.y + "k";
+			series: {
+				pointWidth: 50,
+				dataLabels: {
+					enabled: true,
+					inside: true
 				},
-			}
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
 		},
-		{
-			name: 'Local Non Bumi',
-			showInLegend: false,
-			color: '#2196f3',
-			data: [1221, 1121, 1231, 1321, 1421, 1231],
-			dataLabels: {
-				enabled: true,
-				formatter: function () {
-					return this.y + "k";
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Bumiputera",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "ICP Provider",
+						y: 123,
+					},
+					{
+						name: "ICP Recipient",
+						y: 126,
+					},
+					{
+						name: "Potential ICP Recipient",
+						y: 159,
+					},
+					
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Non-Bumiputera",
+				color: "#064a89",
+				data: [
+					{
+						name: "ICP Provider",
+						y: 142,
+					},
+					{
+						name: "ICP Recipient",
+						y: 152,
+					},
+					{
+						name: "Potential ICP Recipient",
+						y: 132,
+					},
+					
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "ICP Provider",
+						y: 151,
+					},
+					{
+						name: "ICP Recipient",
+						y: 136,
+					},
+					{
+						name: "Potential ICP Recipient",
+						y: 142,
+					},
+					
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 250,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 25,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
 				},
-			}
-		},]
+			],
+		},
 	});
-	// Manpower Local x Non
+	// ICP Involvement By Company
 
-
-
-	//  Material Overview
-	Highcharts.chart('material-overview', {
+	// Manpower Classification
+	Highcharts.chart("manpower-classification", {
 		chart: {
-			type: 'column'
+			type: "column",
+
 		},
 		title: {
 			text: ''
 		},
 
-		xAxis: {
-			categories: [
-				'System',
-				'Sub-System',
-				'Component',
-				'Sub-Component',
-				'Parts',
-			],
-			crosshair: true
-		},
-		credits: {
-			enabled: false
-		},
-		yAxis: {
-
-			min: 0,
-			title: {
-				text: 'Number of Material'
-			}
-		},
-		tooltip: {
-			shared: true,
-			useHTML: true
-		},
-		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		series: [{
-			name: 'Local',
-			showInLegend: false,
-			color: '#1976d2',
-			data: [492, 411, 523, 392, 544],
-			dataLabels: {
-				enabled: true
+		yAxis: [
+			{
+			
+				title: {
+					text: 'Number of Manpower',
+				},
 			},
+		],
+
+		credits: {
+			enabled: false,
+		},
+
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
+		},
+
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b> {point.y}<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				dataLabels: {
+					enabled: true,
+					inside: true
+				},
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Bumiputera",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "Management",
+						y: 1322,
+					},
+					{
+						name: "Technical",
+						y: 1521,
+					},
+					{
+						name: "Support Staff",
+						y: 1321,
+					},
+					
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Non-Bumiputera",
+				color: "#064a89",
+				data: [
+					{
+						name: "Management",
+						y: 1232,
+					},
+					{
+						name: "Technical",
+						y: 1323,
+					},
+					{
+						name: "Support Staff",
+						y: 1322,
+					},
+					
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "Management",
+						y: 1421,
+					},
+					{
+						name: "Technical",
+						y: 1323,
+					},
+					{
+						name: "Support Staff",
+						y: 1523,
+					},
+					
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 250,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 25,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+	});
+	// Manpower Classification
+
+	// Local Vs Foreign Manpower
+	Highcharts.chart("local-vs-foreign-manpower", {
+		chart: {
+			type: "column",
 
 		},
-		{
-			name: 'Import',
-			showInLegend: false,
-			color: '#2196f3',
-			data: [420, 442, 422, 355, 342],
-			dataLabels: {
-				enabled: true
-			}
-		},],
+		title: {
+			text: ''
+		},
 
+		yAxis: [
+			{
+			
+				title: {
+					text: 'Number of Manpower',
+				},
+			},
+		],
+
+		credits: {
+			enabled: false,
+		},
+
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
+		},
+
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b> {point.y}<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				dataLabels: {
+					enabled: true,
+					inside: true
+				},
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Local",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "2017",
+						y: 1321,
+					},
+					{
+						name: "2018",
+						y: 1421,
+					},
+					{
+						name: "2019",
+						y: 1422,
+					},
+					{
+						name: "2020",
+						y: 1523,
+					},
+					{
+						name: "2021",
+						y: 1623,
+					},
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "2017",
+						y: 1122,
+					},
+					{
+						name: "2018",
+						y: 1123,
+					},
+					{
+						name: "2019",
+						y: 1222,
+					},
+					{
+						name: "2020",
+						y: 1233,
+					},
+					{
+						name: "2021",
+						y: 1421,
+					},
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 250,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 25,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+	});
+	// Local Vs Foreign Manpower
+
+	// Bumi Vs Non-Bumi Manpower
+	Highcharts.chart("bumi-vs-nonbumi-manpower", {
+		chart: {
+			type: "column",
+
+		},
+		title: {
+			text: ''
+		},
+
+		yAxis: [
+			{
+			
+				title: {
+					text: 'Number of Manpower',
+				},
+			},
+		],
+
+		credits: {
+			enabled: false,
+		},
+
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
+		},
+
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b> {point.y}<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				dataLabels: {
+					enabled: true,
+					inside: true
+				},
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Bumiputera",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "2017",
+						y: 700,
+					},
+					{
+						name: "2018",
+						y: 802,
+					},
+					{
+						name: "2019",
+						y: 850,
+					},
+					{
+						name: "2020",
+						y: 900,
+					},
+					{
+						name: "2021",
+						y: 920,
+					},
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Non-Bumiputera",
+				color: "#064a89",
+				data: [
+					{
+						name: "2017",
+						y: 621,
+					},
+					{
+						name: "2018",
+						y: 619,
+					},
+					{
+						name: "2019",
+						y: 572,
+					},
+					{
+						name: "2020",
+						y: 623,
+					},
+					{
+						name: "2021",
+						y: 703,
+					},
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 250,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 25,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+	});
+	// Bumi Vs Non-Bumi Manpower
+
+	// Machinery & facilities Overview
+	Highcharts.chart("machinery-overview", {
+		chart: {
+			type: "column",
+
+		},
+		title: {
+			text: ''
+		},
+
+		yAxis: [
+			{
+				
+				title: {
+					text: 'Number of Machinery & Facilities',
+				},
+			},
+		],
+
+		credits: {
+			enabled: false,
+		},
+
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
+		},
+
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b> {point.y}<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				dataLabels: {
+					enabled: true,
+					inside: true
+				},
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Local",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "Machinery",
+						y: 132,
+					},
+					{
+						name: "Tools",
+						y: 142,
+					},
+					{
+						name: "Facilities",
+						y: 152,
+					},
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "Machinery",
+						y: 123,
+					},
+					{
+						name: "Tools",
+						y: 111,
+					},
+					{
+						name: "Facilities",
+						y: 142,
+					},
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 250,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 25,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+	});
+	// Machinery & facilities Overview
+
+	// Material Overview
+	Highcharts.chart("material-overview", {
+		chart: {
+			type: "column",
+
+		},
+		title: {
+			text: ''
+		},
+
+		yAxis: [
+			{
+				
+				title: {
+					text: 'Number of Materials',
+				},
+			},
+		],
+
+		credits: {
+			enabled: false,
+		},
+
+		legend: {
+			layout: "horizontal",
+			align: "center",
+			verticalAlign: "bottom",
+			borderWidth: 0,
+		},
+
+		xAxis: {
+			type: "category",
+			crosshair: true,
+		},
+
+		tooltip: {
+			pointFormat:
+				'<span style="color:{series.color}">●</span>{series.name}:<b>{point.y}<br/></b><br>',
+			shared: true,
+		},
+
+		plotOptions: {
+			series: {
+				pointWidth: 50,
+				dataLabels: {
+					enabled: true,
+					inside: true
+				},
+			},
+			column: {
+				stacking: "normal",
+				pointPadding: 0.2,
+				borderWidth: 0,
+			},
+		},
+
+		series: [
+			{
+				yAxis: 0,
+				name: "Local",
+				color: "#84d9e5",
+				data: [
+					{
+						name: "System",
+						y: 142,
+					},
+					{
+						name: "Sub-System",
+						y: 132,
+					},
+					{
+						name: "Component",
+						y: 126,
+					},
+					{
+						name: "Sub-Component",
+						y: 142,
+					},
+					{
+						name: "Parts",
+						y: 124,
+					},
+				],
+			},
+			{
+				yAxis: 0,
+				name: "Foreign",
+				color: "#064a89",
+				data: [
+					{
+						name: "System",
+						y: 122,
+					},
+					{
+						name: "Sub-System",
+						y: 131,
+					},
+					{
+						name: "Component",
+						y: 132,
+					},
+					{
+						name: "Sub-Component",
+						y: 152,
+					},
+					{
+						name: "Parts",
+						y: 132,
+					},
+				],
+			},
+		],
+
+		responsive: {
+			rules: [
+				{
+					condition: {
+						maxWidth: 250,
+					},
+					chartOptions: {
+						legend: {
+							align: "center",
+							verticalAlign: "bottom",
+							layout: "horizontal",
+						},
+						yAxis: {
+							labels: {
+								align: "left",
+								x: 0,
+								y: -5,
+							},
+							title: {
+								text: null,
+							},
+						},
+						subtitle: {
+							text: null,
+						},
+						credits: {
+							enabled: false,
+						},
+						plotOptions: {
+							series: {
+								pointWidth: 25,
+							},
+							column: {
+								stacking: "normal",
+								pointPadding: 0.2,
+								borderWidth: 0,
+								dataLabels: {
+									enabled: true,
+									formatter: function () {
+										return this.y != 0 ? this.y : "";
+									},
+								},
+							},
+						},
+					},
+				},
+			],
+		},
 	});
 	// Material Overview
 
-
-	//  Machinery Overview
-	Highcharts.chart('machinery-overview', {
-		chart: {
-			type: 'column'
-		},
-		title: {
-			text: ''
-		},
-
-		xAxis: {
-			categories: [
-				'Machinery',
-				'Tools',
-				'Facilities'
-
-			],
-			crosshair: true
-		},
-		credits: {
-			enabled: false
-		},
-		yAxis: {
-
-			min: 0,
-			title: {
-				text: 'Number of Machinery'
-			}
-		},
-		tooltip: {
-			shared: true,
-			useHTML: true
-		},
-		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		plotOptions: {
-			column: {
-				pointPadding: 0.2,
-				borderWidth: 0
-			}
-		},
-		series: [{
-			name: 'Local',
-			showInLegend: false,
-			color: '#1976d2',
-			data: [500, 421, 300],
-			dataLabels: {
-				enabled: true
-			},
-
-		},
-		{
-			name: 'Import',
-			showInLegend: false,
-			color: '#2196f3',
-			data: [312, 322, 150],
-			dataLabels: {
-				enabled: true
-			}
-		},],
-
-	});
-// Machinery Overview
 </script>
 
 

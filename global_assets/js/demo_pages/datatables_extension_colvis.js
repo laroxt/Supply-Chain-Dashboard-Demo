@@ -26,8 +26,8 @@ var DatatableColumnVisibility = (function () {
         autoWidth: false,
         dom: '<"datatable-header"fBl><"datatable-scroll-wrap"t><"datatable-footer"ip>',
         language: {
-          search: "<span>Filter:</span> _INPUT_",
-          searchPlaceholder: "Type to filter...",
+          search: "<span>Search:</span> _INPUT_",
+          searchPlaceholder: "Type to search...",
           lengthMenu: "<span>Show:</span> _MENU_",
           paginate: {
             first: "First",
@@ -90,7 +90,7 @@ var DatatableColumnVisibility = (function () {
         ],
         columnDefs: [
           {
-            targets: [-1, -2, -3, -4 ,-5],
+            targets: [-1, -2, -3, -4 ,-5,-6,-7,-8,-9,-10,-11],
             visible: false,
           },
         ],

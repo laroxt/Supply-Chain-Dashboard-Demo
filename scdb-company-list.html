@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>SCDB-Company List</title>
+	<title>SCDB-Organization / Company List</title>
 	<link rel="icon" type="image/png" href="./global_assets/images/tda-logo/tda-logo.png" />
 
 	<!-- Global stylesheets -->
@@ -32,9 +32,6 @@
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="./global_assets/js/demo_pages/datatables_extension_colvis.js"></script>
 	<script src="./global_assets/js/demo_pages/components_popups.js"></script>
-
-	<script src="./global_assets/js/demo_pages/datatables_basic.js"></script>
-	<script type="text/javascript" src="./global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 
 	<script src="./global_assets/js/plugins/extensions/jquery_ui/interactions.min.js"></script>
 	<script src="./global_assets/js/plugins/forms/selects/select2.min.js"></script>
@@ -148,8 +145,9 @@
 		</div>
 	</div>
 	<!-- /main navbar -->
+
 	<!-- Secondary navbar -->
-	<div class="navbar navbar-expand-md bg-light mb-4">
+	<div class="navbar navbar-expand-md bg-light">
 		<div class="text-center d-md-none w-100">
 			<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse"
 				data-target="#navbar-navigation">
@@ -170,13 +168,15 @@
 						<a href="./scdb-general-overview.html" class="dropdown-item"> <i
 								class="icon-briefcase  mr-2"></i>
 							Overview</a>
-						<a href="./scdb-programme-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Programme List</a>
-						<a href="./scdb-project-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Project List</a>
-						<a href="./scdb-company-list.html" class="dropdown-item"> <i class="icon-briefcase  mr-2"></i>
-							Company List</a>
 					</div>
+				</li>
+
+				<li class="nav-item">
+					<a href="./scdb-orgchart.html" class="navbar-nav-link text-dark">
+						<i class="icon-tree7 mr-1"></i>
+						Contract-Company Tiering
+					</a>
+
 				</li>
 
 				<li class="nav-item">
@@ -188,6 +188,21 @@
 				</li>
 			</ul>
 
+		</div>
+	</div>
+	<div class="mb-2">
+		<div class="page-header pr-3 pl-1">
+			<div class="page-header-content header-elements-md-inline">
+				<div class="page-title">
+					
+					<div class="breadcrumb mt-1">
+						<a href="scdb-general-overview.html" class="breadcrumb-item py-0">BI Dashboard</a>
+						<span class="breadcrumb-item py-0 active">Organization / Company List</span>
+					</div>
+				</div>
+
+				
+			</div>
 		</div>
 	</div>
 	<!-- /secondary navbar -->
@@ -208,7 +223,7 @@
 					<div class="col-md-12">
 						<div class="card">
 							<div class="card-header bg-dark header-elements-inline">
-								<h6 class="card-title font-weight-semibold">Company List</h6>
+								<h6 class="card-title font-weight-semibold">Organization / Company List</h6>
 								<div class="header-elements">
 									<div class="list-icons">
 										<a href="#" class="list-icons-item" data-popup="tooltip"
@@ -223,141 +238,232 @@
 
 
 							<div class="mt-1">
-								<table class=" table datatable-basic">
+								<table class=" table datatable-colvis-restore-2">
 									<thead>
 										<tr>
-
-											<th class="bg-dark pl-3">Company SSM / Unique ID</th>
-											<th class="bg-dark">Company Name</th>
-											<th class="bg-dark"> Company Email</th>
-											<th class="bg-dark">Company Telephone</th>
-											<th class="bg-dark">Company Type</th>
-											<th class="bg-dark">Company Status</th>
-
-
+											<th class="bg-dark">Company Registration Number(SSM) /<br> Unique ID</th>
+											<th class="bg-dark">Organization / Company Name</th>
+											<th class="bg-dark">Organization / Company Type</th>
+											<th class="bg-dark">% of Equity</th>
+											<th class="bg-dark">Date of Incorporation</th>
+											<th class="bg-dark">Organization /<br> Company Status</th>
+											<th class="bg-dark">Company Origin</th>
+											<th class="bg-dark">Email</th>
+											<th class="bg-dark">Telephone</th>
+											<th class="bg-dark">Core Compentencies</th>
+											<th class="bg-dark">Specialist / Expertise</th>
+											<th class="bg-dark">% of Management Level</th>
+											<th class="bg-dark">% of Technical</th>
+											<th class="bg-dark">% of Support Staff</th>
+											<th class="bg-dark">No. of Bumiputera Manpower</th>
+											<th class="bg-dark">No. of Non-Bumiputera Manpower</th>
+											<th class="bg-dark">No. of Foreing Manpower</th>
+											<th class="bg-dark">Sector</th>
+											<th class="bg-dark">Sub-Sector</th>
+											<th class="bg-dark">Product / Service</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td>111111</td>
-											<td><a href="./scdb-company-details.html">Gamuda Berhad</a></td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>11111</td>
+											<td>Company ABC 1</td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>22222</td>
+											<td>Company ABC 2</td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>33333</td>
+											<td>Company ABC 3</td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>44444</td>
+											<td>Company ABC 4</td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>55555</td>
+											<td>Company ABC 5</td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>66666</td>
+											<td>Company ABC 6</td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>77777</td>
+											<td>Company ABC 7/td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>88888</td>
+											<td>Company ABC 8/td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
 										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
+											<td>99999</td>
+											<td>Company ABC 9</td>
+											<td>Enterprise (Sole Propretorship)</td>
+											<td>50%</td>
+											<td>01/01/2021</td>
+											<td>Bumiputera</td>
+											<td>Malaysia</td>
+											<td>CompanyABC@example.com.my</td>
+											<td>011-1111111</td>
+											<td><span class="badge badge-primary">Competencies 1</span><span class="badge badge-primary">Competencies 2</span></td>
+											<td><span class="badge badge-primary">Expertise 1</span><span class="badge badge-primary">Expertise 2</span></td>
+											<td>40%</td>
+											<td>40%</td>
+											<td>20%</td>
+											<td>2,000</td>
+											<td>1,000</td>
+											<td>540</td>
+											<td><span class="badge badge-primary">Sector 1</span><span class="badge badge-primary">Sector 2</span></td>
+											<td><span class="badge badge-primary">Sub-Sector 1</span><span class="badge badge-primary">Sub-Sector 2</span></td>
+											<td><span class="badge badge-primary">Product 1</span><span class="badge badge-primary">Product 2</span></td>
 										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
-										</tr>
-										<tr>
-											<td>111111</td>
-											<td>Company ABC</td>
-											<td>CompanyABC@gmail.com</td>
-											<td>03-1111 1111</td>
-											<td>Government</td>
-											<td>Local Bumi</td>
-										</tr>
+										
+										
 									</tbody>
 								</table>
 							</div>
@@ -366,132 +472,364 @@
 
 					<!-- filter side bar -->
 					<aside>
-						<div class="mt-1 card-body" style="overflow-y: auto; height: 720px;">
+						<div class="card-header">
+							<h5 class="font-weight-semibold">Table Filter Setting</h5>
+						</div>
+						<div class="m-2 card-body" style="overflow-y: auto; height: 620px;">
+							
+
 							<div class="form-group text-sm">
-								<h8 class="font-weight-semibold">ContractorValue Range</h8>
+
+								<h8 class="font-weight-semibold">Company Type</h8>
 								<div class="border-bottom mt-1"></div>
-								<div class="mb-2 mt-1 row">
+								<div class="mt-3 mb-3 row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<select data-placeholder="Select organization / company type"
+												class="form-control select-search" data-fouc>
+												<option></option>
+												<option value="Enterprise (Sole Proprietorship)">Enterprise (Sole
+													Proprietorship)</option>
+												<option value="Enterprise (Partnership)">Enterprise (Partnership)
+												</option>
+												<option value="Sendirian Berhad (Sdn Bhd)/Private Limited Company">
+													Sendirian Berhad (Sdn Bhd)/Private Limited Company</option>
+												<option value="Company Limited by Guarantee (CLG)">Company Limited by
+													Guarantee (CLG)</option>
 
+												<option value="Sendirian (Sdn) / Unlimited Company">Sendirian (Sdn) /
+													Unlimited Company</option>
+												<option value="Berhad (Bhd) / Public Limited Company">Berhad (Bhd) /
+													Public Limited Company</option>
+												<option value="Foreign Company">Foreign Company</option>
+												<option
+													value="Perkongsian Liabiliti Terhad (PLT) / Limited Liability Partnership (LLP)">
+													Perkongsian Liabiliti Terhad (PLT) / Limited Liability Partnership
+													(LLP)</option>
+												<option
+													value="Consortium / joint venture (between local contractor companies)">
+													Consortium / joint venture (between local contractor companies)
+												</option>
+												<option
+													value="Consortium / joint venture (between local and foreign contractors)">
+													Consortium / joint venture (between local and foreign contractors)
+												</option>
 
-									<div class="mb-3 mt-3 mt-1 row">
-										<div class="col-md-12">
-											<div class="form-check form-check-inline d-block align-center">
-												<div class="range-slider">
-													<div class="rangeValues"></div>
-													<input value="1000" min="1000" max="50000" step="500" type="range">
-													<input value="50000" min="1000" max="50000" step="500" type="range">
-												</div>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<h8 class="font-weight-semibold">Company Origin</h8>
+								<div class="border-bottom mt-1"></div>
+								<div class="mt-3 mb-3 row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<select data-placeholder="Select company origin"
+												class="form-control select-search" data-fouc>
+												<option></option>
+												<option value="">-- select one --</option>
+												<option value="afghan">Afghan</option>
+												<option value="albanian">Albanian</option>
+												<option value="algerian">Algerian</option>
+												<option value="american">American</option>
+												<option value="andorran">Andorran</option>
+												<option value="angolan">Angolan</option>
+												<option value="antiguans">Antiguans</option>
+												<option value="argentinean">Argentinean</option>
+												<option value="armenian">Armenian</option>
+												<option value="australian">Australian</option>
+												<option value="austrian">Austrian</option>
+												<option value="azerbaijani">Azerbaijani</option>
+												<option value="bahamian">Bahamian</option>
+												<option value="bahraini">Bahraini</option>
+												<option value="bangladeshi">Bangladeshi</option>
+												<option value="barbadian">Barbadian</option>
+												<option value="barbudans">Barbudans</option>
+												<option value="batswana">Batswana</option>
+												<option value="belarusian">Belarusian</option>
+												<option value="belgian">Belgian</option>
+												<option value="belizean">Belizean</option>
+												<option value="beninese">Beninese</option>
+												<option value="bhutanese">Bhutanese</option>
+												<option value="bolivian">Bolivian</option>
+												<option value="bosnian">Bosnian</option>
+												<option value="brazilian">Brazilian</option>
+												<option value="british">British</option>
+												<option value="bruneian">Bruneian</option>
+												<option value="bulgarian">Bulgarian</option>
+												<option value="burkinabe">Burkinabe</option>
+												<option value="burmese">Burmese</option>
+												<option value="burundian">Burundian</option>
+												<option value="cambodian">Cambodian</option>
+												<option value="cameroonian">Cameroonian</option>
+												<option value="canadian">Canadian</option>
+												<option value="cape verdean">Cape Verdean</option>
+												<option value="central african">Central African</option>
+												<option value="chadian">Chadian</option>
+												<option value="chilean">Chilean</option>
+												<option value="chinese">Chinese</option>
+												<option value="colombian">Colombian</option>
+												<option value="comoran">Comoran</option>
+												<option value="congolese">Congolese</option>
+												<option value="costa rican">Costa Rican</option>
+												<option value="croatian">Croatian</option>
+												<option value="cuban">Cuban</option>
+												<option value="cypriot">Cypriot</option>
+												<option value="czech">Czech</option>
+												<option value="danish">Danish</option>
+												<option value="djibouti">Djibouti</option>
+												<option value="dominican">Dominican</option>
+												<option value="dutch">Dutch</option>
+												<option value="east timorese">East Timorese</option>
+												<option value="ecuadorean">Ecuadorean</option>
+												<option value="egyptian">Egyptian</option>
+												<option value="emirian">Emirian</option>
+												<option value="equatorial guinean">Equatorial Guinean</option>
+												<option value="eritrean">Eritrean</option>
+												<option value="estonian">Estonian</option>
+												<option value="ethiopian">Ethiopian</option>
+												<option value="fijian">Fijian</option>
+												<option value="filipino">Filipino</option>
+												<option value="finnish">Finnish</option>
+												<option value="french">French</option>
+												<option value="gabonese">Gabonese</option>
+												<option value="gambian">Gambian</option>
+												<option value="georgian">Georgian</option>
+												<option value="german">German</option>
+												<option value="ghanaian">Ghanaian</option>
+												<option value="greek">Greek</option>
+												<option value="grenadian">Grenadian</option>
+												<option value="guatemalan">Guatemalan</option>
+												<option value="guinea-bissauan">Guinea-Bissauan</option>
+												<option value="guinean">Guinean</option>
+												<option value="guyanese">Guyanese</option>
+												<option value="haitian">Haitian</option>
+												<option value="herzegovinian">Herzegovinian</option>
+												<option value="honduran">Honduran</option>
+												<option value="hungarian">Hungarian</option>
+												<option value="icelander">Icelander</option>
+												<option value="indian">Indian</option>
+												<option value="0">Indonesian</option>
+												<option value="iranian">Iranian</option>
+												<option value="iraqi">Iraqi</option>
+												<option value="irish">Irish</option>
+												<option value="israeli">Israeli</option>
+												<option value="italian">Italian</option>
+												<option value="ivorian">Ivorian</option>
+												<option value="jamaican">Jamaican</option>
+												<option value="japanese">Japanese</option>
+												<option value="jordanian">Jordanian</option>
+												<option value="kazakhstani">Kazakhstani</option>
+												<option value="kenyan">Kenyan</option>
+												<option value="kittian & nevisian">Kittian & Nevisian
+												</option>
+												<option value="kuwaiti">Kuwaiti</option>
+												<option value="kyrgyz">Kyrgyz</option>
+												<option value="laotian">Laotian</option>
+												<option value="latvian">Latvian</option>
+												<option value="lebanese">Lebanese</option>
+												<option value="liberian">Liberian</option>
+												<option value="libyan">Libyan</option>
+												<option value="liechtensteiner">Liechtensteiner</option>
+												<option value="lithuanian">Lithuanian</option>
+												<option value="luxembourger">Luxembourger</option>
+												<option value="macedonian">Macedonian</option>
+												<option value="malagasy">Malagasy</option>
+												<option value="malawian">Malawian</option>
+												<option value="malaysia" selected>Malaysia</option>
+												<option value="maldivan">Maldivan</option>
+												<option value="malian">Malian</option>
+												<option value="maltese">Maltese</option>
+												<option value="marshallese">Marshallese</option>
+												<option value="mauritanian">Mauritanian</option>
+												<option value="mauritian">Mauritian</option>
+												<option value="mexican">Mexican</option>
+												<option value="micronesian">Micronesian</option>
+												<option value="moldovan">Moldovan</option>
+												<option value="monacan">Monacan</option>
+												<option value="mongolian">Mongolian</option>
+												<option value="moroccan">Moroccan</option>
+												<option value="mosotho">Mosotho</option>
+												<option value="motswana">Motswana</option>
+												<option value="mozambican">Mozambican</option>
+												<option value="namibian">Namibian</option>
+												<option value="nauruan">Nauruan</option>
+												<option value="nepalese">Nepalese</option>
+												<option value="new zealander">New Zealander</option>
+												<option value="ni-vanuatu">Ni-Vanuatu</option>
+												<option value="nicaraguan">Nicaraguan</option>
+												<option value="nigerien">Nigerien</option>
+												<option value="north korean">North Korean</option>
+												<option value="northern irish">Northern Irish</option>
+												<option value="norwegian">Norwegian</option>
+												<option value="omani">Omani</option>
+												<option value="pakistani">Pakistani</option>
+												<option value="palauan">Palauan</option>
+												<option value="panamanian">Panamanian</option>
+												<option value="papua new guinean">Papua New Guinean</option>
+												<option value="paraguayan">Paraguayan</option>
+												<option value="peruvian">Peruvian</option>
+												<option value="polish">Polish</option>
+												<option value="portuguese">Portuguese</option>
+												<option value="qatari">Qatari</option>
+												<option value="romanian">Romanian</option>
+												<option value="russian">Russian</option>
+												<option value="rwandan">Rwandan</option>
+												<option value="saint lucian">Saint Lucian</option>
+												<option value="salvadoran">Salvadoran</option>
+												<option value="samoan">Samoan</option>
+												<option value="san marinese">San Marinese</option>
+												<option value="sao tomean">Sao Tomean</option>
+												<option value="saudi">Saudi</option>
+												<option value="scottish">Scottish</option>
+												<option value="senegalese">Senegalese</option>
+												<option value="serbian">Serbian</option>
+												<option value="seychellois">Seychellois</option>
+												<option value="sierra leonean">Sierra Leonean</option>
+												<option value="singaporean">Singaporean</option>
+												<option value="slovakian">Slovakian</option>
+												<option value="slovenian">Slovenian</option>
+												<option value="solomon islander">Solomon Islander</option>
+												<option value="somali">Somali</option>
+												<option value="south african">South African</option>
+												<option value="south korean">South Korean</option>
+												<option value="spanish">Spanish</option>
+												<option value="sri lankan">Sri Lankan</option>
+												<option value="sudanese">Sudanese</option>
+												<option value="surinamer">Surinamer</option>
+												<option value="swazi">Swazi</option>
+												<option value="swedish">Swedish</option>
+												<option value="swiss">Swiss</option>
+												<option value="syrian">Syrian</option>
+												<option value="taiwanese">Taiwanese</option>
+												<option value="tajik">Tajik</option>
+												<option value="tanzanian">Tanzanian</option>
+												<option value="thai">Thai</option>
+												<option value="togolese">Togolese</option>
+												<option value="tongan">Tongan</option>
+												<option value="trinidadian or tobagonian">Trinidadian or
+													Tobagonian</option>
+												<option value="tunisian">Tunisian</option>
+												<option value="turkish">Turkish</option>
+												<option value="tuvaluan">Tuvaluan</option>
+												<option value="ugandan">Ugandan</option>
+												<option value="ukrainian">Ukrainian</option>
+												<option value="uruguayan">Uruguayan</option>
+												<option value="uzbekistani">Uzbekistani</option>
+												<option value="venezuelan">Venezuelan</option>
+												<option value="vietnamese">Vietnamese</option>
+												<option value="welsh">Welsh</option>
+												<option value="yemenite">Yemenite</option>
+												<option value="zambian">Zambian</option>
+												<option value="zimbabwean">Zimbabwean</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								
+								<h8 class="font-weight-semibold">Company Status</h8>
+								<div class="border-bottom mt-1"></div>
+								<div class="mt-3 mb-3 row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<select name="position"
+												data-placeholder="Select organization / company status"
+												class="form-control select-search" data-fouc>
+												<option></option>
+												<option value="distributor">Bumiputera</option>
+												<option value="supplier">Non-Bumiputera</option>
+												<option value="manufacturer">Foreign</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								
+								<h8 class="font-weight-semibold">Core Competencies</h8>
+								<div class="border-bottom mt-1"></div>
+								<div class="mt-3 mb-3 row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<select class="form-control select-multiple-tags" multiple="multiple"
+												data-fouc>
+												<option value="Logistic Management ">Logistic
+													Management </option>
+												<option value="System Integration" selected>System Integration
+												</option>
+												<option value="Miniaturization" selected>Miniaturization
+												</option>
+												<option value="Wireless Communication">Wireless Communication
+												</option>
+												<option value="Engine">Engine
+												</option>
+												<option value="Microelectronic ">Microelectronic
+												</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								
+								<h8 class="font-weight-semibold">Specialist / Expertise</h8>
+								<div class="border-bottom mt-1"></div>
+								<div class="mt-3 mb-3 row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<select class="form-control select-multiple-tags" multiple="multiple"
+												data-fouc>
+												<option value="Sensor Networks" selected>Sensor Networks
+												</option>
+												<option value="Aerospace Structures" selected>Aerospace
+													Structures</option>
+												<option value="Machine Design">Machine Design</option>
+												<option value="Radio Frequency (Rf) And Microwaves">Radio
+													Frequency (Rf) And Microwaves</option>
+												<option value="Geographical Information System (GIS)">
+													Geographical Information System (GIS)</option>
+												<option value="Biomass Energy Technology ">Biomass Energy
+													Technology </option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<h8 class="font-weight-semibold">Manpower Classification</h8>
+								<div class="border-bottom mt-1"></div>
+								<div class="mt-3 mb-3 row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>No. of Technical:</label>
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="15">
+
 											</div>
-
 										</div>
 									</div>
 
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>No. of Support Staff:</label>
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="5">
 
-
-
-								</div>
-
-
-								<h8 class="font-weight-semibold">% Local</h8>
-								<div class="border-bottom mt-1"></div>
-								<div class="mt-3 mb-3 row">
-									<div class="col-md-6">
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												0% - 25%
-											</label>
-										</div>
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												26% - 50%
-											</label>
+											</div>
 										</div>
 									</div>
-									<div class="col-md-6">
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												51% - 75%
-											</label>
-										</div>
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												76% - 100%
-											</label>
+
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>No. of Bumiputera Manpower:</label>
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="30">
+
+											</div>
 										</div>
 									</div>
 								</div>
 
-								<h8 class="font-weight-semibold">% Local</h8>
-								<div class="border-bottom mt-1"></div>
-								<div class="mt-3 mb-3 row">
-									<div class="col-md-6">
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												0% - 25%
-											</label>
-										</div>
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												26% - 50%
-											</label>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												51% - 75%
-											</label>
-										</div>
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												76% - 100%
-											</label>
-										</div>
-									</div>
-
-
-								</div>
-
-								<h8 class="font-weight-semibold">% Non-Local</h8>
-								<div class="border-bottom mt-1"></div>
-								<div class="mt-3 mb-3 row">
-									<div class="col-md-6">
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												0% - 25%
-											</label>
-										</div>
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												26% - 50%
-											</label>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												51% - 75%
-											</label>
-										</div>
-										<div class="form-check form-check-inline d-block">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" checked>
-												76% - 100%
-											</label>
-										</div>
-									</div>
-								</div>
+								
 
 								<h8 class="font-weight-semibold">Sector</h8>
 								<div class="border-bottom mt-1"></div>
@@ -716,6 +1054,9 @@
 
 
 							</div>
+							
+						</div>
+						<div class="card-footer" style="background-color: white;">
 							<div class="float-right">
 								<button type="button" class="btn btn-dark  mr-1"><i class="icon-filter3 mr-1"></i>
 									Filter</button>
