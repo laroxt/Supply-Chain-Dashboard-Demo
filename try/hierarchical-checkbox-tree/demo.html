@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hierarchical Checkbox Tree Example</title>
+
+	<link rel="stylesheet" href="hierarchical-checkboxes.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<style>
+		html,
+		* {
+			font-family: 'Inter';
+		}
+
+		.container {
+			margin: 150px auto;
+			max-width: 1060px;
+		}
+
+		body {
+			background-color: #fafafa;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div>
+			<div class="hierarchy-checkboxes" rel="test">
+				<label class="hierarchy-root-label">Material</label>
+				<div class="hierarchy-root-child hierarchy-node">
+					<div class="hierarchy-node">
+	
+						<label class="hierarchy-label">System</label>
+						<div class="hierarchy-node leaf">
+							<label class="hierarchy-label">Node (Leaf)</label>
+						</div>
+						<div class="hierarchy-node leaf">
+							<label class="hierarchy-label">Node (Leaf)</label>
+						</div>
+						<div class="hierarchy-node">
+							<label class="hierarchy-label">Node</label>
+							<div class="hierarchy-node leaf">
+								<label class="hierarchy-label">Node (Leaf)</label>
+							</div>
+							<div class="hierarchy-node leaf">
+								<label class="hierarchy-label">Node (Leaf)</label>
+							</div>
+							<div class="hierarchy-node leaf">
+								<label class="hierarchy-label">Node (Leaf)</label>
+							</div>
+						</div>
+						<div class="hierarchy-node leaf">
+							<label class="hierarchy-label">Node (Leaf)</label>
+						</div>
+					</div>
+	
+	
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Sub-System</label>
+					</div>
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Component</label>
+					</div>
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Sub-Component11111111111111111111111111111111111111111</label>
+					</div>
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Parts</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="hierarchy-checkboxes" rel="test">
+				<label class="hierarchy-root-label">Machinery & Facilities</label>
+				<div class="hierarchy-root-child hierarchy-node">
+					<div class="hierarchy-node">
+	
+						<label class="hierarchy-label">System</label>
+						<div class="hierarchy-node leaf">
+							<label class="hierarchy-label">Node (Leaf)</label>
+						</div>
+						<div class="hierarchy-node leaf">
+							<label class="hierarchy-label">Node (Leaf)</label>
+						</div>
+						<div class="hierarchy-node">
+							<label class="hierarchy-label">Node</label>
+							<div class="hierarchy-node leaf">
+								<label class="hierarchy-label">Node (Leaf)</label>
+							</div>
+							<div class="hierarchy-node leaf">
+								<label class="hierarchy-label">Node (Leaf)</label>
+							</div>
+							<div class="hierarchy-node leaf">
+								<label class="hierarchy-label">Node (Leaf)</label>
+							</div>
+						</div>
+						<div class="hierarchy-node leaf">
+							<label class="hierarchy-label">Node (Leaf)</label>
+						</div>
+					</div>
+	
+	
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Sub-System</label>
+					</div>
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Component</label>
+					</div>
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Sub-Component</label>
+					</div>
+					<div class="hierarchy-node leaf">
+						<label class="hierarchy-label">Parts</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="hierarchical-checkboxes.js"></script>
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36251023-1']);
+		_gaq.push(['_setDomainName', 'jqueryscript.net']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+	<script>
+		try {
+			fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
+				return true;
+			}).catch(function (e) {
+				var carbonScript = document.createElement("script");
+				carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+				carbonScript.id = "_carbonads_js";
+				document.getElementById("carbon-block").appendChild(carbonScript);
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	</script>
+
+</body>
+
+</html>

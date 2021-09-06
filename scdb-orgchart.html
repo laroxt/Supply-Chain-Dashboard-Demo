@@ -43,6 +43,15 @@
 	<script src="orgchart/dragscroll-master/dragscroll.js"></script>
 	<script src="assets/js/app.js"></script>
 
+	<script src="./global_assets/js/plugins/extensions/jquery_ui/core.min.js"></script>
+	<script src="./global_assets/js/plugins/extensions/jquery_ui/effects.min.js"></script>
+	<script src="./global_assets/js/plugins/extensions/cookie.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="./global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="./global_assets/js/plugins/trees/fancytree_all.min.js"></script>
+	<script src="./global_assets/js/plugins/trees/fancytree_childcounter.js"></script>
+	<script src="./global_assets/js/demo_pages/extra_trees.js"></script>
+
 
 </head>
 
@@ -176,7 +185,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="./scdb-orgchart.html" class="navbar-nav-link text-dark">
+					<a href="./scdb-contract-tiering-list.html" class="navbar-nav-link text-dark">
 						<i class="icon-tree7 mr-1"></i>
 						Contract-Company Tiering
 					</a>
@@ -200,8 +209,8 @@
 				<div class="page-title">
 					
 					<div class="breadcrumb mt-1">
-						<a href="scdb-general-overview.html" class="breadcrumb-item py-0">BI Dashboard</a>
-						<span class="breadcrumb-item py-0 active">Contract-Company Tiering</span>
+						<a href="scdb-contract-tiering-list.html" class="breadcrumb-item py-0">Contract-Company Tiering List</a>
+						<span class="breadcrumb-item py-0 active">Contract 1</span>
 					</div>
 				</div>
 
@@ -224,64 +233,19 @@
 					<div class="col-md-12">
 						<div class="row">
 							<div class="col-md-3">
-								<div class="col-md-12">
-									<div class="card">
-										<div class="card-header bg-dark header-elements-inline">
-											<h6 class="card-title font-weight-semibold">Materials Filter Option</h6>
-										</div>
-										<div class="card-body">
-
-
-											<div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Contract Reference
-														Number</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Contract Name</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-
-											<!-- <div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Company Reference Number</label>
-													<input type="text" class="form-control">
-												</div>
-											</div>
-											<div class="col-md-12">
-												<div class="form-group" class="text-center">
-													<label class="font-weight-semibold">Company Name</label>
-													<input type="text" class="form-control">
-												</div>
-											</div> -->
-
-											<div class="col-md-12">
-												<div class="form-group">
-													<button type="button" class="btn btn-outline-dark "
-														onclick="location.href='./scdb-programme-list.html'"><i
-															class="mr-1 icon-search4"></i>Search</button>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div>
+								
 
 								<div class="col-md-12">
 									<div class="card" style="height: 500px;">
 										<div class="card-header bg-dark header-elements-inline">
-											<h6 class="card-title font-weight-semibold">General Details</h6>
+											<h6 class="card-title font-weight-semibold">Contract Overview</h6>
 										</div>
 										<div class="card-body">
 											<div>
 												<h6 class="font-weight-bold border-bottom"><i
 														class="icon-info3 m-1"></i>Contract Details</h6>
 												<h8 class="font-weight-bold">Contract Name</h8>
-												<p>Contract ABC</p>
+												<p>Contract 1</p>
 												<h8 class="font-weight-bold">Contract Reference Number</h8>
 												<p>FQ2021213</p>
 												<h8 class="font-weight-bold">Contract Value</h8>
@@ -294,7 +258,8 @@
 														class="icon-info3 m-1"></i>Main-Contractor Details</h6>
 												<h8 class="font-weight-bold">Organization / Company Name</h8>
 												<p>Gamudah Berhad</p>
-												<h8 class="font-weight-bold">Company Registration Number(SSM) / Unique ID</h8>
+												<h8 class="font-weight-bold">Company Registration Number(SSM) / Unique
+													ID</h8>
 												<p>201901000005</p>
 											</div>
 
@@ -318,7 +283,7 @@
 												<ul>
 													<li>
 
-														<a href="./scdb-company-details-machineries.html">
+														<a href="./scdb-company-details.html">
 															<h6 class="m-1 text-dark font-weight-semibold" disabled>Main
 																Contractor</h6><img
 																src="./orgchart/orgchart-logo/1.jpg">
@@ -352,7 +317,8 @@
 																				src="./orgchart/orgchart-logo/4.jpg">
 																			<h7 class="m-1 text-dark font-weight-semibold"
 																				disabled>
-																				Muhibbah Berhad</h7><span>View More</span>
+																				Muhibbah Berhad</h7><span>View
+																				More</span>
 																		</a> </li>
 																</ul>
 															</li>
@@ -362,7 +328,8 @@
 																		src="./orgchart/orgchart-logo/5.jpg">
 																	<h7 class="m-1 text-dark font-weight-semibold"
 																		disabled>
-																		Mudajaya Group Berhad </h7><span>View More</span>
+																		Mudajaya Group Berhad </h7><span>View
+																		More</span>
 																</a>
 																<ul>
 																	<li> <a href="#">
@@ -422,6 +389,135 @@
 											class="pagination pagination-sm pagination-pager pagination-pager-linked justify-content-between">
 										</ul>
 
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="card ">
+											<div class="card-header bg-dark header-elements-inline">
+												<h6 class="card-title font-weight-bold">Tiering Dyaniamic Tree</h6>
+		
+											</div>
+		
+											<div class="card-body">
+												<div class="row">
+													<div class="col-md-12">
+														<h6 class="card-title font-weight-bold">Machineries & Facilities
+															Information</h6>
+														<div class="tree-default card card-body">
+															<ul class="d-none mb-0">
+		
+																<li class="folder ">Machineries
+																	<ul>
+																		<li>Machine 1</li>
+																		<li>Machine 2</li>
+																		<li>Machine 3</li>
+																		<li>Machine 4</li>
+																	</ul>
+																</li>
+		
+																<li class="folder ">Facilities
+																	<ul>
+																		<li>Facility 1</li>
+																		<li>Facility 2</li>
+																		<li>Facility 3</li>
+																		<li>Facility 4</li>
+																	</ul>
+																</li>
+		
+																<li class="folder ">Tools
+																	<ul>
+																		<li>Tool 1</li>
+																		<li>Tool 2</li>
+																		<li>Tool 3</li>
+																		<li>Tool 4</li>
+																	</ul>
+																</li>
+		
+															</ul>
+														</div>
+													</div>
+													<div class="col-md-12">
+														<h6 class="card-title font-weight-bold">Materials Information</h6>
+														<div class="tree-default card card-body">
+															<ul class="d-none mb-0">
+		
+																<li class="folder ">System
+																	<ul>
+																		<li>System 1 (System)
+																			<ul>
+																				<li><a href="#"><span>Sub-System 1 (Sub-System)</span></a></li>
+																				<li>Sub-System 2 (Sub-System)
+																					<ul>
+																						<li>Component 1 (Component)</li>
+																						<li>Component 2 (Component)
+																							<ul>
+																								<li>Sub-Component 1
+																									(Sub-Component)</li>
+																								<li>Sub-Component 1
+																									(Sub-Component)
+																								<ul>
+																									<li>Parts 1 (Parts)</li>
+																									<li>Parts 2 (Parts)</li>
+																								</ul>
+																							</li>
+																							</ul>
+																						</li>
+																					</ul>
+																				</li>
+																			</ul>
+																		</li>
+																		<li>System 2 (Sub-System)</li>
+																		<li>System 3 (Sub-System)</li>
+																		<li>System 4 (Sub-System)</li>
+																	</ul>
+																</li>
+		
+																<li class="folder ">Sub-System
+																	<ul>
+																		<li>Sub-System 1 (Sub-System)</li>
+																		<li>Sub-System 2 (Sub-System)</li>
+																		<li>Sub-System 3 (Sub-System)</li>
+																		<li>Sub-System 4 (Sub-System)</li>
+																	</ul>
+																</li>
+		
+																<li class="folder ">Component
+																	<ul>
+																		<li>Component 1 (Component)</li>
+																		<li>Component 2 (Component)</li>
+																		<li>Component 3 (Component)</li>
+																		<li>Component 4 (Component)</li>
+																	</ul>
+																</li>
+		
+																<li class="folder ">Sub-Component
+																	<ul>
+																		<li>Sub-Component 1 (Sub-Component)</li>
+																		<li>Sub-Component 2 (Sub-Component)</li>
+																		<li>Sub-Component 3 (Sub-Component)</li>
+																		<li>Sub-Component 4 (Sub-Component)</li>
+																	</ul>
+																</li>
+		
+																<li class="folder ">Parts
+																	<ul>
+																		<li>Parts 1 (Parts)</li>
+																		<li>Parts 2 (Parts)</li>
+																		<li>Parts 3 (Parts)</li>
+																		<li>Parts 4 (Parts)</li>
+																	</ul>
+																</li>
+		
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>

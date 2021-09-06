@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Treetable Plugin Demo</title>
+
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="jquery-treetable.css">
+
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="jquery-treetable.js"></script>
+	<script>
+		$(function () {
+			$("table").treetable();
+		});
+	</script>
+	
+</head>
+
+<body>
+
+	<div class="container" style="margin:150px auto;">
+		<h1>jQuery Treetable Plugin Demo</h1>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th style="width:400px">Graph here</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Mark</td>
+					<td>Otto</td>
+					<td>
+						<div class="tt" data-tt-id="root2" data-tt-parent="">Mark</div>
+					</td>
+					<td>@mdo</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>
+						<div class="tt" data-tt-id="jacob" data-tt-parent="root2">Jacob</div>
+					</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Jacob</td>
+					<td>Thornton</td>
+					<td>
+						<div class="tt" data-tt-id="jacob" data-tt-parent="root2">Jacob</div>
+					</td>
+					<td>@fat</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>Larry</td>
+					<td>the Bird</td>
+					<td>
+						<div class="tt" data-tt-id="larry" data-tt-parent="root2">Larry</div>
+					</td>
+					<td>@twitter</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Tony</td>
+					<td>the Bird</td>
+					<td>
+						<div class="tt" data-tt-id="tony" data-tt-parent="larry">Tony</div>
+					</td>
+					<td>@twitter</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Tony</td>
+					<td>the Bird</td>
+					<td>
+						<div class="tt" data-tt-id="tony3" data-tt-parent="tony">Tony</div>
+					</td>
+					<td>@twitter</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Tony</td>
+					<td>the Bird</td>
+					<td>
+						<div class="tt" data-tt-id="tony4" data-tt-parent="tony3">Tony</div>
+					</td>
+					<td>@twitter</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Tony</td>
+					<td>the Bird</td>
+					<td>
+						<div class="tt" data-tt-id="ton5" data-tt-parent="tony3">Tony</div>
+					</td>
+					<td>@twitter</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Tony</td>
+					<td>the Bird</td>
+					<td>
+						<div class="tt" data-tt-id="ton324" data-tt-parent="tony3">Tony</div>
+					</td>
+					<td>@twitter</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>Tony</td>
+					<td>the Bird</td>
+					<td>
+						<div class="tt" data-tt-id="tony2" data-tt-parent="tony">Tony</div>
+					</td>
+					<td>@twitter</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+
+</html>
