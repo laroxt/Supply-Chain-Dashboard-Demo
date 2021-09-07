@@ -11647,9 +11647,9 @@ pre.code-toolbar>.toolbar a:focus, pre.code-toolbar>.toolbar a:hover, pre.code-t
 .fancytree-custom-icon, .fancytree-expander, .fancytree-icon {
     display: inline-block;
     vertical-align: top;
-    margin-left: .5rem;
+    /* margin-left: .5rem; */
     margin-top: .37502rem;
-    width: 1rem;
+    /* width: 1rem; */
     height: 1rem
 }
 
@@ -11711,29 +11711,29 @@ img.fancytree-icon {
     }
 }
 
-.fancytree-ico-c .fancytree-icon:after, .fancytree-ico-e .fancytree-icon:after {
+/* .fancytree-ico-c .fancytree-icon:after, .fancytree-ico-e .fancytree-icon:after {
     content: ""
 }
 
 .fancytree-has-children.fancytree-ico-c .fancytree-icon:after {
     content: ""
-}
+} */
 
-.fancytree-has-children.fancytree-ico-e .fancytree-icon:after {
+/* .fancytree-has-children.fancytree-ico-e .fancytree-icon:after {
     content: ""
 }
 
 .fancytree-ico-cf .fancytree-icon:after, .fancytree-ico-ef .fancytree-icon:after {
     content: ""
-}
+} */
 
-.fancytree-has-children.fancytree-ico-cf .fancytree-icon:after {
+/* .fancytree-has-children.fancytree-ico-cf .fancytree-icon:after {
     content: ""
-}
+} */
 
-.fancytree-has-children.fancytree-ico-ef .fancytree-icon:after {
+/* .fancytree-has-children.fancytree-ico-ef .fancytree-icon:after {
     content: ""
-}
+} */
 
 .fancytree-checkbox {
     width: 1.25rem;
@@ -17205,4 +17205,27 @@ a.fc-more:hover {
     background-color: #fafafa;
     border-radius: .1875rem;
     box-shadow: 0 0 0 0 #2196f3
+}
+
+.btn-disable-hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.btn-disable-hover:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.btn-disable-hover:active {
+    outline: none;
+    border: none;
+}
+
+.btn-disable-hover:focus {
+    outline: 0;
 }
